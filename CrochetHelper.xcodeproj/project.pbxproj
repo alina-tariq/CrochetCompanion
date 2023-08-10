@@ -7,18 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C73F60E62A8442FD00A30380 /* Crochet_HelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60E52A8442FD00A30380 /* Crochet_HelperApp.swift */; };
+		C73F60E62A8442FD00A30380 /* CrochetHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60E52A8442FD00A30380 /* CrochetHelperApp.swift */; };
 		C73F60E82A8442FD00A30380 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60E72A8442FD00A30380 /* ContentView.swift */; };
 		C73F60EA2A8442FE00A30380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60E92A8442FE00A30380 /* Assets.xcassets */; };
 		C73F60ED2A8442FE00A30380 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60EC2A8442FE00A30380 /* Preview Assets.xcassets */; };
+		C73F60FA2A84532300A30380 /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60F92A84532300A30380 /* PatternsView.swift */; };
+		C73F60FC2A84533C00A30380 /* NewPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FB2A84533C00A30380 /* NewPatternView.swift */; };
+		C73F60FE2A84535100A30380 /* YarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FD2A84535100A30380 /* YarnView.swift */; };
+		C73F61002A84535C00A30380 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FF2A84535C00A30380 /* SettingsView.swift */; };
+		C73F61022A84536C00A30380 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61012A84536C00A30380 /* ProjectsView.swift */; };
+		C73F61042A8453A200A30380 /* GlossaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61032A8453A200A30380 /* GlossaryView.swift */; };
+		C73F610A2A84570500A30380 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61092A84570500A30380 /* TabBar.swift */; };
+		C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610B2A847A1A00A30380 /* PatternModel.swift */; };
+		C73F610E2A856E2700A30380 /* YarnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610D2A856E2700A30380 /* YarnModel.swift */; };
+		C73F61102A856E3400A30380 /* GlossaryTermModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610F2A856E3400A30380 /* GlossaryTermModel.swift */; };
+		C73F61122A856E3D00A30380 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61112A856E3D00A30380 /* ProjectModel.swift */; };
+		C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61132A8586FB00A30380 /* NewYarnView.swift */; };
+		C73F61182A85877100A30380 /* NewTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61172A85877100A30380 /* NewTermView.swift */; };
+		C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61192A85877D00A30380 /* NewProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C73F60E22A8442FD00A30380 /* Crochet Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crochet Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73F60E52A8442FD00A30380 /* Crochet_HelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crochet_HelperApp.swift; sourceTree = "<group>"; };
+		C73F60E22A8442FD00A30380 /* CrochetHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrochetHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C73F60E52A8442FD00A30380 /* CrochetHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrochetHelperApp.swift; sourceTree = "<group>"; };
 		C73F60E72A8442FD00A30380 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C73F60E92A8442FE00A30380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C73F60EC2A8442FE00A30380 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C73F60F92A84532300A30380 /* PatternsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsView.swift; sourceTree = "<group>"; };
+		C73F60FB2A84533C00A30380 /* NewPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatternView.swift; sourceTree = "<group>"; };
+		C73F60FD2A84535100A30380 /* YarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnView.swift; sourceTree = "<group>"; };
+		C73F60FF2A84535C00A30380 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C73F61012A84536C00A30380 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		C73F61032A8453A200A30380 /* GlossaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryView.swift; sourceTree = "<group>"; };
+		C73F61092A84570500A30380 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		C73F610B2A847A1A00A30380 /* PatternModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternModel.swift; sourceTree = "<group>"; };
+		C73F610D2A856E2700A30380 /* YarnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnModel.swift; sourceTree = "<group>"; };
+		C73F610F2A856E3400A30380 /* GlossaryTermModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTermModel.swift; sourceTree = "<group>"; };
+		C73F61112A856E3D00A30380 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		C73F61132A8586FB00A30380 /* NewYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYarnView.swift; sourceTree = "<group>"; };
+		C73F61172A85877100A30380 /* NewTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTermView.swift; sourceTree = "<group>"; };
+		C73F61192A85877D00A30380 /* NewProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +63,7 @@
 		C73F60D92A8442FD00A30380 = {
 			isa = PBXGroup;
 			children = (
-				C73F60E42A8442FD00A30380 /* Crochet Helper */,
+				C73F60E42A8442FD00A30380 /* CrochetHelper */,
 				C73F60E32A8442FD00A30380 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +71,22 @@
 		C73F60E32A8442FD00A30380 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C73F60E22A8442FD00A30380 /* Crochet Helper.app */,
+				C73F60E22A8442FD00A30380 /* CrochetHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C73F60E42A8442FD00A30380 /* Crochet Helper */ = {
+		C73F60E42A8442FD00A30380 /* CrochetHelper */ = {
 			isa = PBXGroup;
 			children = (
-				C73F60E52A8442FD00A30380 /* Crochet_HelperApp.swift */,
-				C73F60E72A8442FD00A30380 /* ContentView.swift */,
+				C73F60E52A8442FD00A30380 /* CrochetHelperApp.swift */,
+				C73F60F32A8443E300A30380 /* Views */,
+				C73F60F52A84440A00A30380 /* Models */,
+				C73F60F42A8443FE00A30380 /* ViewModels */,
 				C73F60E92A8442FE00A30380 /* Assets.xcassets */,
 				C73F60EB2A8442FE00A30380 /* Preview Content */,
 			);
-			path = "Crochet Helper";
+			path = CrochetHelper;
 			sourceTree = "<group>";
 		};
 		C73F60EB2A8442FE00A30380 /* Preview Content */ = {
@@ -67,12 +97,64 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C73F60F32A8443E300A30380 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C73F61152A85871F00A30380 /* Add */,
+				C73F60F62A84442600A30380 /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C73F60F42A8443FE00A30380 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C73F60F52A84440A00A30380 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C73F610B2A847A1A00A30380 /* PatternModel.swift */,
+				C73F610D2A856E2700A30380 /* YarnModel.swift */,
+				C73F610F2A856E3400A30380 /* GlossaryTermModel.swift */,
+				C73F61112A856E3D00A30380 /* ProjectModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C73F60F62A84442600A30380 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C73F60E72A8442FD00A30380 /* ContentView.swift */,
+				C73F61092A84570500A30380 /* TabBar.swift */,
+				C73F60F92A84532300A30380 /* PatternsView.swift */,
+				C73F60FD2A84535100A30380 /* YarnView.swift */,
+				C73F60FF2A84535C00A30380 /* SettingsView.swift */,
+				C73F61012A84536C00A30380 /* ProjectsView.swift */,
+				C73F61032A8453A200A30380 /* GlossaryView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C73F61152A85871F00A30380 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				C73F60FB2A84533C00A30380 /* NewPatternView.swift */,
+				C73F61132A8586FB00A30380 /* NewYarnView.swift */,
+				C73F61172A85877100A30380 /* NewTermView.swift */,
+				C73F61192A85877D00A30380 /* NewProjectView.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C73F60E12A8442FD00A30380 /* Crochet Helper */ = {
+		C73F60E12A8442FD00A30380 /* CrochetHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C73F60F02A8442FE00A30380 /* Build configuration list for PBXNativeTarget "Crochet Helper" */;
+			buildConfigurationList = C73F60F02A8442FE00A30380 /* Build configuration list for PBXNativeTarget "CrochetHelper" */;
 			buildPhases = (
 				C73F60DE2A8442FD00A30380 /* Sources */,
 				C73F60DF2A8442FD00A30380 /* Frameworks */,
@@ -82,9 +164,9 @@
 			);
 			dependencies = (
 			);
-			name = "Crochet Helper";
+			name = CrochetHelper;
 			productName = "Crochet Helper";
-			productReference = C73F60E22A8442FD00A30380 /* Crochet Helper.app */;
+			productReference = C73F60E22A8442FD00A30380 /* CrochetHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +184,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C73F60DD2A8442FD00A30380 /* Build configuration list for PBXProject "Crochet Helper" */;
+			buildConfigurationList = C73F60DD2A8442FD00A30380 /* Build configuration list for PBXProject "CrochetHelper" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +197,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C73F60E12A8442FD00A30380 /* Crochet Helper */,
+				C73F60E12A8442FD00A30380 /* CrochetHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -137,8 +219,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C73F61122A856E3D00A30380 /* ProjectModel.swift in Sources */,
+				C73F61022A84536C00A30380 /* ProjectsView.swift in Sources */,
+				C73F610E2A856E2700A30380 /* YarnModel.swift in Sources */,
+				C73F60FA2A84532300A30380 /* PatternsView.swift in Sources */,
+				C73F61102A856E3400A30380 /* GlossaryTermModel.swift in Sources */,
+				C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */,
 				C73F60E82A8442FD00A30380 /* ContentView.swift in Sources */,
-				C73F60E62A8442FD00A30380 /* Crochet_HelperApp.swift in Sources */,
+				C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */,
+				C73F60FC2A84533C00A30380 /* NewPatternView.swift in Sources */,
+				C73F61042A8453A200A30380 /* GlossaryView.swift in Sources */,
+				C73F61002A84535C00A30380 /* SettingsView.swift in Sources */,
+				C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */,
+				C73F60E62A8442FD00A30380 /* CrochetHelperApp.swift in Sources */,
+				C73F60FE2A84535100A30380 /* YarnView.swift in Sources */,
+				C73F610A2A84570500A30380 /* TabBar.swift in Sources */,
+				C73F61182A85877100A30380 /* NewTermView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,12 +371,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alinatariq.Crochet-Helper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinatariq.CrochetHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -304,12 +401,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alinatariq.Crochet-Helper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinatariq.CrochetHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,7 +418,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C73F60DD2A8442FD00A30380 /* Build configuration list for PBXProject "Crochet Helper" */ = {
+		C73F60DD2A8442FD00A30380 /* Build configuration list for PBXProject "CrochetHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C73F60EE2A8442FE00A30380 /* Debug */,
@@ -329,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C73F60F02A8442FE00A30380 /* Build configuration list for PBXNativeTarget "Crochet Helper" */ = {
+		C73F60F02A8442FE00A30380 /* Build configuration list for PBXNativeTarget "CrochetHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C73F60F12A8442FE00A30380 /* Debug */,
