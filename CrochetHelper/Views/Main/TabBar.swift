@@ -24,11 +24,6 @@ struct TabBar: View {
                     Text("Projects")
                 }
             
-//            NewPatternView()
-//                .tabItem {
-//                    Label("New", systemImage: "plus.circle.fill")
-//                }
-            
             YarnView()
                 .tabItem {
                     Image("Yarn")
@@ -39,6 +34,12 @@ struct TabBar: View {
                 .tabItem {
                     Image("Glossary")
                     Text("Glossary")
+                }
+            
+            SettingsView()
+                .tabItem {
+                    Image("Settings")
+                    Text("Settings")
                 }
         }
     }
