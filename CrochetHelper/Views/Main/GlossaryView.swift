@@ -10,9 +10,19 @@ import SwiftUI
 struct GlossaryView: View {
     var body: some View {
         NavigationStack {
-            Text("List of Terms")
-                .padding()
-                .navigationTitle("Glossary")
+            Text("You don't have any terms")
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        NewTermView()
+                    } label: {
+                        Image(systemName: "plus")
+                                
+                    }
+                    .padding()
+                }
+            })
+            .navigationTitle("Glossary Terms")
         }
     }
 }

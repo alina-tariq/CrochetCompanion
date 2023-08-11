@@ -1,31 +1,32 @@
 //
-//  NewProjectView.swift
-//  CrochetHelper
+//  NewPatternView.swift
+//  Crochet Helper
 //
-//  Created by Alina Tariq on 2023-08-10.
+//  Created by Alina Tariq on 2023-08-09.
 //
 
 import SwiftUI
 
-struct NewProjectView: View {
+struct NewPatternView: View {
     @State private var name: String = ""
     @State private var imageUrl: String = ""
     @State private var hook: HookSizes = HookSizes.b
+    @State private var yarnType: YarnTypes = YarnTypes.lace
     @State private var yarn: String = ""
     @State private var stitches: String = ""
     @State private var patternUrl: String = ""
-    @State private var pattern: String = "Enter pattern details"
+    @State private var pattern: String = ""
     @State private var notes: String = ""
     
     var body: some View {
         NavigationStack {
             Form {
-                Section(header: Text("Project Name *")) {
-                    TextField("Name", text: $name)
+                Section(header: Text("Pattern Name *")) {
+                    TextField("", text: $name)
                 }
                 
-                Section(header: Text("Image")) {
-                    TextField("Enter image URL", text: $imageUrl)
+                Section(header: Text("Image URL")) {
+                    TextField("", text: $imageUrl)
                 }
                 
                 Section(header: Text("Hook Size")) {
@@ -33,43 +34,54 @@ struct NewProjectView: View {
                         ForEach(HookSizes.allCases) {
                             hook in Text(hook.rawValue)
                                 .tag(hook)
-                            
+                                
                         }
                     }
                     .labelsHidden()
                 }
                 
-                Section(header: Text("Yarn")) {
-                    TextField("Enter yarns used", text: $stitches)
+                Section(header: Text("Yarn Weight")) {
+                    Picker("", selection: $yarnType) {
+                        ForEach(YarnTypes.allCases) {
+                            yarnType in Text(yarnType.rawValue)
+                                .tag(yarnType)
+                                
+                        }
+                    }
+                    .labelsHidden()
+                }
+                
+                Section(header: Text("Suggested Yarn")) {
+                    TextField("", text: $stitches)
                 }
                 
                 Section(header: Text("Stiches")) {
-                    TextField("Enter stitches used", text: $stitches)
+                    TextField("", text: $stitches)
                 }
                 
-                Section(header: Text("Link")) {
-                    TextField("Enter pattern URL", text: $patternUrl)
+                Section(header: Text("Pattern Link")) {
+                    TextField("", text: $patternUrl)
                 }
                 
                 Section(header: Text("Pattern *")) {
                     TextEditor(text: $pattern)
-                        .frame(minHeight: 50)
+                        .frame(minHeight: 60)
                 }
                 Section(header: Text("Additional Notes")) {
                     TextEditor(text: $notes)
-                        .frame(minHeight: 50)
-                    
+                        .frame(minHeight: 60)
+                        
                 }
             }
             .toolbar(content: {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        
-                    } label: {
-                        Label("X", systemImage: "xmark")
-                            .labelStyle(.iconOnly)
-                    }.padding()
-                }
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button {
+//
+//                    } label: {
+//                        Label("X", systemImage: "xmark")
+//                            .labelStyle(.iconOnly)
+//                    }.padding()
+//                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         
@@ -81,14 +93,14 @@ struct NewProjectView: View {
                     .disabled(name.isEmpty || pattern.isEmpty)
                 }
             })
-            .navigationTitle("Start New Project")
+            .navigationTitle("Create New Pattern")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
-struct NewProjectView_Previews: PreviewProvider {
+struct NewPatternView_Previews: PreviewProvider {
     static var previews: some View {
-        NewProjectView()
+        NewPatternView()
     }
 }

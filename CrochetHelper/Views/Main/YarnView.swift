@@ -10,9 +10,19 @@ import SwiftUI
 struct YarnView: View {
     var body: some View {
         NavigationStack {
-            Text("You haven't added any yarns to your collection yet")
-                .padding()
-                .navigationTitle("Yarn Collection")
+            Text("You don't have any yarns")
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        NewYarnView()
+                    } label: {
+                        Image(systemName: "plus")
+                                
+                    }
+                    .padding()
+                }
+            })
+            .navigationTitle("Yarn Collection")
         }
     }
 }

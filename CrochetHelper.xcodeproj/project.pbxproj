@@ -102,7 +102,7 @@
 		C73F60F32A8443E300A30380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C73F61152A85871F00A30380 /* Add */,
+				C73F61152A85871F00A30380 /* New */,
 				C73F60F62A84442600A30380 /* Main */,
 			);
 			path = Views;
@@ -141,7 +141,7 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		C73F61152A85871F00A30380 /* Add */ = {
+		C73F61152A85871F00A30380 /* New */ = {
 			isa = PBXGroup;
 			children = (
 				C73F60FB2A84533C00A30380 /* NewPatternView.swift */,
@@ -149,7 +149,7 @@
 				C73F61172A85877100A30380 /* NewTermView.swift */,
 				C73F61192A85877D00A30380 /* NewProjectView.swift */,
 			);
-			path = Add;
+			path = New;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

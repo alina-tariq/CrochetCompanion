@@ -35,14 +35,14 @@ struct NewTermView: View {
                 }
             }
             .toolbar(content: {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-
-                    } label: {
-                        Label("X", systemImage: "xmark")
-                            .labelStyle(.iconOnly)
-                    }.padding()
-                }
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button {
+//
+//                    } label: {
+//                        Label("X", systemImage: "xmark")
+//                            .labelStyle(.iconOnly)
+//                    }.padding()
+//                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         
