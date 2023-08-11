@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ProjectsView: View {
+    @State private var addProject = false
+    
     var body: some View {
         NavigationStack {
             Text("You don't have any projects")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink {
-                        NewProjectView()
+                    Button {
+                        addProject = true
                     } label: {
                         Image(systemName: "plus")
                                 
@@ -23,6 +25,9 @@ struct ProjectsView: View {
                 }
             })
             .navigationTitle("Projects")
+            .sheet(isPresented: $addProject) {
+                NewProjectView()
+            }
         }
     }
 }

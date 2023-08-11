@@ -13,6 +13,8 @@ struct NewTermView: View {
     @State private var imageUrl: String = ""
     @State private var videoUrl: String = ""
     
+    @Environment(\.dismiss) var dismissTermSheet
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -35,14 +37,14 @@ struct NewTermView: View {
                 }
             }
             .toolbar(content: {
-//                ToolbarItem(placement: .navigationBarLeading) {
-//                    Button {
-//
-//                    } label: {
-//                        Label("X", systemImage: "xmark")
-//                            .labelStyle(.iconOnly)
-//                    }.padding()
-//                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        dismissTermSheet()
+                    } label: {
+                        Label("X", systemImage: "xmark")
+                            .labelStyle(.iconOnly)
+                    }.padding()
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         

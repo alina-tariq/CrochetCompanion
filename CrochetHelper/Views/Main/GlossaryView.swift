@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct GlossaryView: View {
+    @State private var addTerm = false
+    
     var body: some View {
         NavigationStack {
             Text("You don't have any terms")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink {
-                        NewTermView()
+                    Button {
+                        addTerm = true
                     } label: {
                         Image(systemName: "plus")
                                 
@@ -23,6 +25,9 @@ struct GlossaryView: View {
                 }
             })
             .navigationTitle("Glossary Terms")
+            .sheet(isPresented: $addTerm) {
+                NewTermView()
+            }
         }
     }
 }

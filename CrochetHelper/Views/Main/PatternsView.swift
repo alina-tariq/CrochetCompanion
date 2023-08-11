@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct PatternsView: View {
+    @State private var addPattern = false
+    
     var body: some View {
         NavigationStack {
             Text("You don't have any patterns")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink {
-                        NewPatternView()
+                    Button {
+                        addPattern = true
                     } label: {
                         Image(systemName: "plus")
                                 
@@ -23,6 +25,9 @@ struct PatternsView: View {
                 }
             })
             .navigationTitle("Patterns")
+            .sheet(isPresented: $addPattern) {
+                NewPatternView()
+            }
         }
     }
 }

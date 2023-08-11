@@ -17,6 +17,8 @@ struct NewPatternView: View {
     @State private var pattern: String = ""
     @State private var notes: String = ""
     
+    @Environment(\.dismiss) var dismissPatternSheet
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -68,14 +70,14 @@ struct NewPatternView: View {
                 }
             }
             .toolbar(content: {
-//                ToolbarItem(placement: .navigationBarLeading) {
-//                    Button {
-//
-//                    } label: {
-//                        Label("X", systemImage: "xmark")
-//                            .labelStyle(.iconOnly)
-//                    }.padding()
-//                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        dismissPatternSheet()
+                    } label: {
+                        Label("X", systemImage: "xmark")
+                            .labelStyle(.iconOnly)
+                    }.padding()
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         

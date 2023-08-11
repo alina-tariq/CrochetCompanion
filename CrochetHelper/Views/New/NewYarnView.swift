@@ -18,6 +18,8 @@ struct NewYarnView: View {
     @State private var qty: Int = 0
     @State private var notes: String = ""
     
+    @Environment(\.dismiss) var dismissYarnSheet
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -80,14 +82,14 @@ struct NewYarnView: View {
                 }
             }
             .toolbar(content: {
-//                ToolbarItem(placement: .navigationBarLeading) {
-//                    Button {
-//
-//                    } label: {
-//                        Label("X", systemImage: "xmark")
-//                            .labelStyle(.iconOnly)
-//                    }.padding()
-//                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        dismissYarnSheet()
+                    } label: {
+                        Label("X", systemImage: "xmark")
+                            .labelStyle(.iconOnly)
+                    }.padding()
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         

@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct YarnView: View {
+    @State private var addYarn = false
+    
     var body: some View {
         NavigationStack {
             Text("You don't have any yarns")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink {
-                        NewYarnView()
+                    Button {
+                        addYarn = true
                     } label: {
                         Image(systemName: "plus")
                                 
@@ -23,6 +25,9 @@ struct YarnView: View {
                 }
             })
             .navigationTitle("Yarn Collection")
+            .sheet(isPresented: $addYarn) {
+                NewYarnView()
+            }
         }
     }
 }
