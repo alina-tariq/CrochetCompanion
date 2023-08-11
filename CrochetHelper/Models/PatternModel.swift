@@ -8,7 +8,9 @@
 import Foundation
 
 enum HookSizes: String, CaseIterable, Identifiable {
-    var id: String { self.rawValue }
+    var id: String {
+        self.rawValue
+    }
     
     case b = "B/1 - 2.25 mm"
     case c = "C/2 - 2.75 mm"
@@ -26,7 +28,9 @@ enum HookSizes: String, CaseIterable, Identifiable {
 }
 
 enum YarnTypes: String, CaseIterable, Identifiable {
-    var id: String { self.rawValue }
+    var id: String {
+        self.rawValue
+    }
     
     case lace = "0 - Lace"
     case superFine = "1 - Super Fine"
@@ -45,9 +49,8 @@ struct Pattern: Identifiable {
     let name: String
     let imageUrl: String // TODO: use local images
     let hook: HookSizes.RawValue // TODO: support multiple hook sizes, allow filtering
-    let yarnWeight: YarnTypes.RawValue // TODO: allow filtering
-    let yarn: String // TODO: make yarn into tags for filtering (support owned + new yarn)
-    let stitches: String // TODO: make stitches into tags for filtering
+    let yarnWeight: YarnTypes.RawValue // TODO: support multiple weights, allow filtering
+    let stitches: String // TODO: populate from glossary terms, connect to definition
     let patternUrl: String
     let pattern: String
     let notes: String

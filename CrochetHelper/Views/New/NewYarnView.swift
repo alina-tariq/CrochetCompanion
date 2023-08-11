@@ -11,6 +11,9 @@ struct NewYarnView: View {
     @State private var brand: String = ""
     @State private var name: String = ""
     @State private var colour: String = ""
+    @State private var colourFamily: ColourTypes = ColourTypes.black
+    @State private var yarnType: YarnTypes = YarnTypes.lace
+    @State private var dyeLot: String = ""
     @State private var imageUrl: String = ""
     @State private var qty: Int = 0
     @State private var notes: String = ""
@@ -19,20 +22,45 @@ struct NewYarnView: View {
         NavigationStack {
             Form {
                 Section(header: Text("Brand *")) {
-                    TextField("Brand", text: $brand)
+                    TextField("", text: $brand)
                 }
                 
                 Section(header: Text("Name *")) {
-                    TextField("Name", text: $name)
+                    TextField("", text: $name)
                 }
                 
                 Section(header: Text("Colour *")) {
-                    TextField("Colour", text: $colour)
+                    TextField("", text: $colour)
+                }
+                
+                Section(header: Text("Colour Family *")) {
+                    Picker("", selection: $colourFamily) {
+                        Text("").tag("")
+                        ForEach(ColourTypes.allCases) { colourFamily in Text(colourFamily.id)
+                                .tag(colourFamily)
+                        }
+                    }
+                    .labelsHidden()
+                }
+                
+                Section(header: Text("Yarn Weight *")) {
+                    Picker("", selection: $yarnType) {
+                        ForEach(YarnTypes.allCases) {
+                            yarnType in Text(yarnType.rawValue)
+                                .tag(yarnType)
+                                
+                        }
+                    }
+                    .labelsHidden()
+                }
+                
+                Section(header: Text("Dye Lot")) {
+                    TextField("", text: $dyeLot)
                 }
                 
                 // TODO: save images locally
                 Section(header: Text("Image")) {
-                    TextField("Enter image URL", text: $imageUrl)
+                    TextField("", text: $imageUrl)
                 }
                 
                 // TODO: make smaller

@@ -10,7 +10,6 @@ import SwiftUI
 struct NewProjectView: View {
     @State private var name: String = ""
     @State private var imageUrl: String = ""
-    @State private var hook: HookSizes = HookSizes.b
     @State private var yarn: String = ""
     @State private var stitches: String = ""
     @State private var patternUrl: String = ""
@@ -21,34 +20,23 @@ struct NewProjectView: View {
         NavigationStack {
             Form {
                 Section(header: Text("Project Name *")) {
-                    TextField("Name", text: $name)
+                    TextField("", text: $name)
                 }
                 
                 Section(header: Text("Image")) {
-                    TextField("Enter image URL", text: $imageUrl)
-                }
-                
-                Section(header: Text("Hook Size")) {
-                    Picker("", selection: $hook) {
-                        ForEach(HookSizes.allCases) {
-                            hook in Text(hook.rawValue)
-                                .tag(hook)
-                            
-                        }
-                    }
-                    .labelsHidden()
+                    TextField("", text: $imageUrl)
                 }
                 
                 Section(header: Text("Yarn")) {
-                    TextField("Enter yarns used", text: $stitches)
+                    TextField("", text: $stitches)
                 }
                 
                 Section(header: Text("Stiches")) {
-                    TextField("Enter stitches used", text: $stitches)
+                    TextField("", text: $stitches)
                 }
                 
-                Section(header: Text("Link")) {
-                    TextField("Enter pattern URL", text: $patternUrl)
+                Section(header: Text("Pattern Link")) {
+                    TextField("", text: $patternUrl)
                 }
                 
                 Section(header: Text("Pattern *")) {

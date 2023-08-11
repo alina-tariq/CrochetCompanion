@@ -12,7 +12,6 @@ struct Project: Identifiable {
     let id = UUID()
     let name: String
     let imageUrl: String // TODO: see PatternModel
-    let hook: HookSizes.RawValue // TODO: see PatternModel
     let yarn: String // TODO: support populating from yarn collection
     let stitches: String // TODO: see PatternModel
     let patternUrl: String

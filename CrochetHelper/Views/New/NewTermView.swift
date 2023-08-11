@@ -17,21 +17,21 @@ struct NewTermView: View {
         NavigationStack {
             Form {
                 Section(header: Text("Name *")) {
-                    TextField("Name", text: $name)
+                    TextField("", text: $name)
                 }
                 
                 Section(header: Text("Instructions *")) {
-                    TextField("Instructions", text: $instructions)
+                    TextField("", text: $instructions)
                 }
                 
                 // TODO: save images locally
                 Section(header: Text("Image")) {
-                    TextField("Enter image URL", text: $imageUrl)
+                    TextField("", text: $imageUrl)
                 }
                 
                 // TODO: embed video?
                 Section(header: Text("Video")) {
-                    TextField("Enter video URL", text: $videoUrl)
+                    TextField("", text: $videoUrl)
                 }
             }
             .toolbar(content: {

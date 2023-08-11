@@ -12,7 +12,6 @@ struct NewPatternView: View {
     @State private var imageUrl: String = ""
     @State private var hook: HookSizes = HookSizes.b
     @State private var yarnType: YarnTypes = YarnTypes.lace
-    @State private var yarn: String = ""
     @State private var stitches: String = ""
     @State private var patternUrl: String = ""
     @State private var pattern: String = ""
@@ -31,8 +30,8 @@ struct NewPatternView: View {
                 
                 Section(header: Text("Hook Size")) {
                     Picker("", selection: $hook) {
-                        ForEach(HookSizes.allCases) {
-                            hook in Text(hook.rawValue)
+                        ForEach(HookSizes.allCases) { hook in
+                            Text(hook.id)
                                 .tag(hook)
                                 
                         }
@@ -42,17 +41,12 @@ struct NewPatternView: View {
                 
                 Section(header: Text("Yarn Weight")) {
                     Picker("", selection: $yarnType) {
-                        ForEach(YarnTypes.allCases) {
-                            yarnType in Text(yarnType.rawValue)
+                        ForEach(YarnTypes.allCases) { yarnType in Text(yarnType.id)
                                 .tag(yarnType)
                                 
                         }
                     }
                     .labelsHidden()
-                }
-                
-                Section(header: Text("Suggested Yarn")) {
-                    TextField("", text: $stitches)
                 }
                 
                 Section(header: Text("Stiches")) {
