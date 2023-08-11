@@ -25,6 +25,7 @@
 		C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61132A8586FB00A30380 /* NewYarnView.swift */; };
 		C73F61182A85877100A30380 /* NewTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61172A85877100A30380 /* NewTermView.swift */; };
 		C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61192A85877D00A30380 /* NewProjectView.swift */; };
+		C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		C73F61132A8586FB00A30380 /* NewYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYarnView.swift; sourceTree = "<group>"; };
 		C73F61172A85877100A30380 /* NewTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTermView.swift; sourceTree = "<group>"; };
 		C73F61192A85877D00A30380 /* NewProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectView.swift; sourceTree = "<group>"; };
+		C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				C73F60FF2A84535C00A30380 /* SettingsView.swift */,
 				C73F61012A84536C00A30380 /* ProjectsView.swift */,
 				C73F61032A8453A200A30380 /* GlossaryView.swift */,
+				C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */,
 				C73F60E82A8442FD00A30380 /* ContentView.swift in Sources */,
 				C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */,
+				C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */,
 				C73F60FC2A84533C00A30380 /* NewPatternView.swift in Sources */,
 				C73F61042A8453A200A30380 /* GlossaryView.swift in Sources */,
 				C73F61002A84535C00A30380 /* SettingsView.swift in Sources */,
@@ -362,7 +366,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crochet Helper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CrochetHelper/Preview Content\"";
 				DEVELOPMENT_TEAM = 8HZG4VWY6M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -392,7 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Crochet Helper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CrochetHelper/Preview Content\"";
 				DEVELOPMENT_TEAM = 8HZG4VWY6M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

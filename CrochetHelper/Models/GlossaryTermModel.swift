@@ -11,6 +11,6 @@ struct GlossaryTerm: Identifiable {
     let id = UUID()
     let name: String
     let instructions: String
-    let imageUrl: String
-    let videoURL: String
+    let imageUrl: String // TODO: use local images
+    let videoUrl: String // TODO: embed video in app for viewing?
 }

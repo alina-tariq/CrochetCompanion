@@ -12,7 +12,7 @@ struct Yarn: Identifiable {
     let brand: String
     let name: String
     let colour: String
-    let image: String
+    let imageUrl: String
     let qty: Int
     let notes: String
 }

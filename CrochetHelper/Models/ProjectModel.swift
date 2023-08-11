@@ -7,14 +7,15 @@
 
 import Foundation
 
+// TODO: add a progress tracker
 struct Project: Identifiable {
     let id = UUID()
     let name: String
-    let image: String
-    let hook: HookSizes.RawValue
-    let yarn: String
-    let stitches: String
-    let url: String
+    let imageUrl: String // TODO: see PatternModel
+    let hook: HookSizes.RawValue // TODO: see PatternModel
+    let yarn: String // TODO: support populating from yarn collection
+    let stitches: String // TODO: see PatternModel
+    let patternUrl: String
     let pattern: String
     let notes: String
 }
