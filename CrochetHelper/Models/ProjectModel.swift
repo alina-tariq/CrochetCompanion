@@ -13,7 +13,7 @@ class Project: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var name: String
     // TODO: see PatternModel
-    @Persisted var imageUrl: String = "https://images.unsplash.com/photo-1619234711431-644a9d28d6ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=898&q=80"
+    @Persisted var imageUrl: String
     // TODO: support populating from yarn collection
     @Persisted var yarn: String
     // TODO: see PatternModel

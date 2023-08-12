@@ -50,7 +50,7 @@ class Pattern: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var name: String
     // TODO: use local images
-    @Persisted var imageUrl: String = "https://images.unsplash.com/photo-1608033087328-f282cc17a27f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80"
+    @Persisted var imageUrl: String
     // TODO: support multiple hook sizes, allow filtering
     @Persisted var hook: HookSizes.RawValue = ""
     // TODO: support multiple weights, allow filtering

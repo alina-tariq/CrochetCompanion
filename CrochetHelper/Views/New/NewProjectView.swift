@@ -67,15 +67,12 @@ struct NewProjectView: View {
                     Button {
                         let newProject = Project()
                         newProject.name = name
+                        newProject.imageUrl = imageUrl
                         newProject.yarn = yarn
                         newProject.stitches = stitches
                         newProject.patternUrl = patternUrl
                         newProject.instructions = instructions
                         newProject.notes = notes
-                        
-                        if (imageUrl != "") {
-                            newProject.imageUrl = imageUrl
-                        }
                         
                         $projects.append(newProject)
                         

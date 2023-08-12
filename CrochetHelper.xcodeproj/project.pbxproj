@@ -25,6 +25,11 @@
 		C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61132A8586FB00A30380 /* NewYarnView.swift */; };
 		C73F61182A85877100A30380 /* NewTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61172A85877100A30380 /* NewTermView.swift */; };
 		C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61192A85877D00A30380 /* NewProjectView.swift */; };
+		C75364732A8800C9003403B8 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = C75364722A8800C9003403B8 /* YouTubePlayerKit */; };
+		C75364762A880659003403B8 /* PatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364752A880659003403B8 /* PatternView.swift */; };
+		C75364782A880665003403B8 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364772A880665003403B8 /* ProjectView.swift */; };
+		C753647A2A88066E003403B8 /* YarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364792A88066E003403B8 /* YarnView.swift */; };
+		C753647C2A88067B003403B8 /* TermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753647B2A88067B003403B8 /* TermView.swift */; };
 		C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */; };
 		C7FDB2102A86BE6A00C06EA4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB20F2A86BE6A00C06EA4 /* Realm */; };
 		C7FDB2122A86BE6A00C06EA4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB2112A86BE6A00C06EA4 /* RealmSwift */; };
@@ -58,6 +63,10 @@
 		C73F61132A8586FB00A30380 /* NewYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYarnView.swift; sourceTree = "<group>"; };
 		C73F61172A85877100A30380 /* NewTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTermView.swift; sourceTree = "<group>"; };
 		C73F61192A85877D00A30380 /* NewProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectView.swift; sourceTree = "<group>"; };
+		C75364752A880659003403B8 /* PatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternView.swift; sourceTree = "<group>"; };
+		C75364772A880665003403B8 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		C75364792A88066E003403B8 /* YarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnView.swift; sourceTree = "<group>"; };
+		C753647B2A88067B003403B8 /* TermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermView.swift; sourceTree = "<group>"; };
 		C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadView.swift; sourceTree = "<group>"; };
 		C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCard.swift; sourceTree = "<group>"; };
 		C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
@@ -76,6 +85,7 @@
 			files = (
 				C7FDB2122A86BE6A00C06EA4 /* RealmSwift in Frameworks */,
 				C7FDB2102A86BE6A00C06EA4 /* Realm in Frameworks */,
+				C75364732A8800C9003403B8 /* YouTubePlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +132,7 @@
 		C73F60F32A8443E300A30380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C75364742A880635003403B8 /* Detail */,
 				C7FDB21C2A8718EF00C06EA4 /* List */,
 				C73F61152A85871F00A30380 /* New */,
 				C73F60F62A84442600A30380 /* Main */,
@@ -173,6 +184,17 @@
 			path = New;
 			sourceTree = "<group>";
 		};
+		C75364742A880635003403B8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C75364752A880659003403B8 /* PatternView.swift */,
+				C75364772A880665003403B8 /* ProjectView.swift */,
+				C75364792A88066E003403B8 /* YarnView.swift */,
+				C753647B2A88067B003403B8 /* TermView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		C7FDB2132A86E9AE00C06EA4 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +237,7 @@
 			packageProductDependencies = (
 				C7FDB20F2A86BE6A00C06EA4 /* Realm */,
 				C7FDB2112A86BE6A00C06EA4 /* RealmSwift */,
+				C75364722A8800C9003403B8 /* YouTubePlayerKit */,
 			);
 			productName = "Crochet Helper";
 			productReference = C73F60E22A8442FD00A30380 /* CrochetHelper.app */;
@@ -246,6 +269,7 @@
 			mainGroup = C73F60D92A8442FD00A30380;
 			packageReferences = (
 				C7FDB20E2A86BE6A00C06EA4 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				C75364712A8800C9003403B8 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
 			);
 			productRefGroup = C73F60E32A8442FD00A30380 /* Products */;
 			projectDirPath = "";
@@ -276,12 +300,15 @@
 				C73F61122A856E3D00A30380 /* ProjectModel.swift in Sources */,
 				C73F61022A84536C00A30380 /* AllProjectsView.swift in Sources */,
 				C73F610E2A856E2700A30380 /* YarnModel.swift in Sources */,
+				C75364762A880659003403B8 /* PatternView.swift in Sources */,
 				C73F60FA2A84532300A30380 /* AllPatternsView.swift in Sources */,
 				C73F61102A856E3400A30380 /* GlossaryTermModel.swift in Sources */,
+				C753647A2A88066E003403B8 /* YarnView.swift in Sources */,
 				C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */,
 				C7FDB2192A86EDDB00C06EA4 /* YarnCard.swift in Sources */,
 				C7FDB2172A86EDD300C06EA4 /* ProjectCard.swift in Sources */,
 				C73F60E82A8442FD00A30380 /* ContentView.swift in Sources */,
+				C753647C2A88067B003403B8 /* TermView.swift in Sources */,
 				C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */,
 				C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */,
 				C73F60FC2A84533C00A30380 /* NewPatternView.swift in Sources */,
@@ -296,6 +323,7 @@
 				C7FDB2242A871FAD00C06EA4 /* TermList.swift in Sources */,
 				C73F610A2A84570500A30380 /* TabBar.swift in Sources */,
 				C73F61182A85877100A30380 /* NewTermView.swift in Sources */,
+				C75364782A880665003403B8 /* ProjectView.swift in Sources */,
 				C7FDB2152A86ED1400C06EA4 /* PatternCard.swift in Sources */,
 				C7FDB2222A871FA500C06EA4 /* YarnList.swift in Sources */,
 			);
@@ -502,6 +530,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C75364712A8800C9003403B8 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.2;
+			};
+		};
 		C7FDB20E2A86BE6A00C06EA4 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -513,6 +549,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C75364722A8800C9003403B8 /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C75364712A8800C9003403B8 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
+		};
 		C7FDB20F2A86BE6A00C06EA4 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C7FDB20E2A86BE6A00C06EA4 /* XCRemoteSwiftPackageReference "realm-swift" */;

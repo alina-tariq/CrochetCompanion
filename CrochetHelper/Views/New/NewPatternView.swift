@@ -86,14 +86,11 @@ struct NewPatternView: View {
                     Button {
                         let newPattern = Pattern()
                         newPattern.name = name
+                        newPattern.imageUrl = imageUrl
                         newPattern.instructions = instructions
                         newPattern.stitches = stitches
                         newPattern.patternUrl = patternUrl
                         newPattern.notes = notes
-                        
-                        if (imageUrl != "") {
-                            newPattern.imageUrl = imageUrl
-                        }
                         
                         if (hook != HookSizes.unknown) {
                             newPattern.hook = hook.id

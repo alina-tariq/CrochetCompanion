@@ -101,12 +101,9 @@ struct NewYarnView: View {
                         newYarn.colourFamily = colourFamily.rawValue
                         newYarn.yarnWeight = yarnWeight.rawValue
                         newYarn.dyeLot = dyeLot
+                        newYarn.imageUrl = imageUrl
                         newYarn.qty = qty
                         newYarn.notes = notes
-                        
-                        if (imageUrl != "") {
-                            newYarn.imageUrl = imageUrl
-                        }
                         
                         $yarnCollection.append(newYarn)
                         
