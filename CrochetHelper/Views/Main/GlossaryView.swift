@@ -12,7 +12,7 @@ struct GlossaryView: View {
     
     var body: some View {
         NavigationStack {
-            Text("You don't have any terms")
+            TermList()
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {

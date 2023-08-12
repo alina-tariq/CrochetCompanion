@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct YarnView: View {
+struct YarnCollectionView: View {
     @State private var addYarn = false
     
     var body: some View {
         NavigationStack {
-            Text("You don't have any yarns")
+            ScrollView {
+                YarnList()
+            }
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -32,8 +34,8 @@ struct YarnView: View {
     }
 }
 
-struct YarnView_Previews: PreviewProvider {
+struct YarnCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        YarnView()
+        YarnCollectionView()
     }
 }

@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct PatternsView: View {
+struct AllPatternsView: View {
     @State private var addPattern = false
     
     var body: some View {
         NavigationStack {
-            Text("You don't have any patterns")
+            ScrollView {
+                PatternList()
+            }
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -32,8 +34,8 @@ struct PatternsView: View {
     }
 }
 
-struct PatternsView_Previews: PreviewProvider {
+struct AllPatternsView_Previews: PreviewProvider {
     static var previews: some View {
-        PatternsView()
+        AllPatternsView()
     }
 }

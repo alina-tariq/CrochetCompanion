@@ -12,19 +12,19 @@ struct TabBar: View {
     
     var body: some View {
         TabView {
-            PatternsView()
+            AllPatternsView()
                 .tabItem{
                     Image("Patterns")
                     Text("Patterns")
                 }
             
-            ProjectsView()
+            AllProjectsView()
                 .tabItem {
                     Image("Projects")
                     Text("Projects")
                 }
             
-            YarnView()
+            YarnCollectionView()
                 .tabItem {
                     Image("Yarn")
                     Text("Yarn")

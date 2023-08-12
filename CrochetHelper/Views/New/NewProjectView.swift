@@ -67,7 +67,6 @@ struct NewProjectView: View {
                     Button {
                         let newProject = Project()
                         newProject.name = name
-                        newProject.imageUrl = imageUrl
                         newProject.yarn = yarn
                         newProject.stitches = stitches
                         newProject.patternUrl = patternUrl

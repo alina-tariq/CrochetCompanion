@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct ProjectsView: View {
+struct AllProjectsView: View {
     @State private var addProject = false
     
     var body: some View {
         NavigationStack {
-            Text("You don't have any projects")
+            ScrollView {
+                ProjectList()
+            }
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -32,8 +34,8 @@ struct ProjectsView: View {
     }
 }
 
-struct ProjectsView_Previews: PreviewProvider {
+struct AllProjectsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectsView()
+        AllProjectsView()
     }
 }
