@@ -34,7 +34,7 @@ struct TermView: View {
                         .foregroundColor(.white.opacity(0.7))
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
-                .frame(height: 300)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(LinearGradient(gradient: Gradient(colors: [Color(.gray).opacity(0.3), Color(.gray)]), startPoint: .top, endPoint: .bottom))
                 .clipShape(Rectangle())
                 .padding(.horizontal)
@@ -49,29 +49,23 @@ struct TermView: View {
                 Text(term.instructions)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
+                let videoLink = YouTubePlayer(source: .url(term.videoUrl))
+                
+                if (term.videoUrl != "") {
+                    Text("Video Instructions:")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.headline)
+                    
+                    YouTubePlayerView(videoLink, placeholderOverlay: { ProgressView() })
+                        .frame(height: 220)
+                        .background(Color(.systemBackground))
+                        .shadow(
+                            color: .black.opacity(0.1),
+                            radius: 46, x: 0, y: 15)
+                }
+                
             }
             .padding(.horizontal)
-            
-            let videoLink = YouTubePlayer(source: .url(term.videoUrl))
-            
-            if (term.videoUrl != "") {
-                VStack {
-                    YouTubePlayerView(videoLink,
-                                      placeholderOverlay: {
-                        ProgressView()
-                    }
-                    )
-                    .frame(height: 220)
-                    .background(Color(.systemBackground))
-                    .shadow(
-                        color: .black.opacity(0.1),
-                        radius: 46,
-                        x: 0,
-                        y: 15
-                    )
-                }
-                .padding(.horizontal)
-            }
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
