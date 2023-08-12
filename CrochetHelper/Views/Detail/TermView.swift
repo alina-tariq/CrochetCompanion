@@ -67,19 +67,19 @@ struct TermView: View {
             }
             .padding(.horizontal)
         }
-        .toolbar(content: {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    editTerm = true
-                } label: {
-                    Text("Edit")
-                }
-                .padding()
-            }
-        })
-        .sheet(isPresented: $editTerm) {
-            NewTermView()
-        }
+//        .toolbar(content: {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                Button {
+//                    editTerm = true
+//                } label: {
+//                    Text("Edit")
+//                }
+//                .padding()
+//            }
+//        })
+//        .sheet(isPresented: $editTerm) {
+//            NewTermView()
+//        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }

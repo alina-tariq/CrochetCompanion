@@ -86,19 +86,19 @@ struct YarnView: View {
             }
             .padding(.horizontal)
         }
-        .toolbar(content: {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    editYarn = true
-                } label: {
-                    Text("Edit")
-                }
-                .padding()
-            }
-        })
-        .sheet(isPresented: $editYarn) {
-            NewYarnView()
-        }
+//        .toolbar(content: {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                Button {
+//                    editYarn = true
+//                } label: {
+//                    Text("Edit")
+//                }
+//                .padding()
+//            }
+//        })
+//        .sheet(isPresented: $editYarn) {
+//            NewYarnView()
+//        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }

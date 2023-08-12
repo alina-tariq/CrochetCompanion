@@ -90,19 +90,19 @@ struct PatternView: View {
             }
             .padding(.horizontal)
         }
-        .toolbar(content: {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    editPattern = true
-                } label: {
-                    Text("Edit")
-                }
-                .padding()
-            }
-        })
-        .sheet(isPresented: $editPattern) {
-            NewPatternView()
-        }
+//        .toolbar(content: {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                Button {
+//                    editPattern = true
+//                } label: {
+//                    Text("Edit")
+//                }
+//                .padding()
+//            }
+//        })
+//        .sheet(isPresented: $editPattern) {
+//            NewPatternView()
+//        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }

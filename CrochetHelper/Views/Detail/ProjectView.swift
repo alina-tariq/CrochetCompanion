@@ -90,19 +90,19 @@ struct ProjectView: View {
             }
             .padding(.horizontal)
         }
-        .toolbar(content: {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    editProject = true
-                } label: {
-                    Text("Edit")
-                }
-                .padding()
-            }
-        })
-        .sheet(isPresented: $editProject) {
-            NewProjectView()
-        }
+//        .toolbar(content: {
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                Button {
+//                    editProject = true
+//                } label: {
+//                    Text("Edit")
+//                }
+//                .padding()
+//            }
+//        })
+//        .sheet(isPresented: $editProject) {
+//            NewProjectView()
+//        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }
