@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct NewProjectView: View {
     @State private var name: String = ""
@@ -13,8 +14,10 @@ struct NewProjectView: View {
     @State private var yarn: String = ""
     @State private var stitches: String = ""
     @State private var patternUrl: String = ""
-    @State private var pattern: String = ""
+    @State private var instructions: String = ""
     @State private var notes: String = ""
+    
+    @ObservedResults(Project.self) var projects
     
     @Environment(\.dismiss) var dismissProjectSheet
     
@@ -42,7 +45,7 @@ struct NewProjectView: View {
                 }
                 
                 Section(header: Text("Pattern *")) {
-                    TextEditor(text: $pattern)
+                    TextEditor(text: $instructions)
                         .frame(minHeight: 50)
                 }
                 Section(header: Text("Additional Notes")) {
@@ -62,13 +65,28 @@ struct NewProjectView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
+                        let newProject = Project()
+                        newProject.name = name
+                        newProject.imageUrl = imageUrl
+                        newProject.yarn = yarn
+                        newProject.stitches = stitches
+                        newProject.patternUrl = patternUrl
+                        newProject.instructions = instructions
+                        newProject.notes = notes
                         
+                        if (imageUrl != "") {
+                            newProject.imageUrl = imageUrl
+                        }
+                        
+                        $projects.append(newProject)
+                        
+                        dismissProjectSheet()
                     } label: {
                         Label("", systemImage: "checkmark")
                             .labelStyle(.iconOnly)
                     }
                     .padding()
-                    .disabled(name.isEmpty || pattern.isEmpty)
+                    .disabled(name.isEmpty || instructions.isEmpty)
                 }
             })
             .navigationTitle("Start New Project")

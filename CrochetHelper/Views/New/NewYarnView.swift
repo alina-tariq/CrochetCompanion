@@ -6,17 +6,20 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct NewYarnView: View {
     @State private var brand: String = ""
     @State private var name: String = ""
     @State private var colour: String = ""
-    @State private var colourFamily: ColourTypes = ColourTypes.black
-    @State private var yarnType: YarnTypes = YarnTypes.lace
+    @State private var colourFamily: ColourTypes = ColourTypes.unknown
+    @State private var yarnWeight: YarnTypes = YarnTypes.unknown
     @State private var dyeLot: String = ""
     @State private var imageUrl: String = ""
     @State private var qty: Int = 0
     @State private var notes: String = ""
+    
+    @ObservedResults(Yarn.self) var yarnCollection
     
     @Environment(\.dismiss) var dismissYarnSheet
     
@@ -37,8 +40,7 @@ struct NewYarnView: View {
                 
                 Section(header: Text("Colour Family *")) {
                     Picker("", selection: $colourFamily) {
-                        Text("").tag("")
-                        ForEach(ColourTypes.allCases) { colourFamily in Text(colourFamily.id)
+                        ForEach(ColourTypes.allCases) { colourFamily in Text(colourFamily.rawValue)
                                 .tag(colourFamily)
                         }
                     }
@@ -46,10 +48,10 @@ struct NewYarnView: View {
                 }
                 
                 Section(header: Text("Yarn Weight *")) {
-                    Picker("", selection: $yarnType) {
-                        ForEach(YarnTypes.allCases) {
-                            yarnType in Text(yarnType.rawValue)
-                                .tag(yarnType)
+                    Picker("", selection: $yarnWeight) {
+                        ForEach(YarnTypes.allCases) { yarnWeight in
+                            Text(yarnWeight.rawValue)
+                                .tag(yarnWeight)
                                 
                         }
                     }
@@ -92,13 +94,26 @@ struct NewYarnView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
+                        let newYarn = Yarn()
+                        newYarn.brand = brand
+                        newYarn.name = name
+                        newYarn.colour = colour
+                        newYarn.colourFamily = colourFamily.rawValue
+                        newYarn.yarnWeight = yarnWeight.rawValue
+                        newYarn.dyeLot = dyeLot
+                        newYarn.imageUrl = imageUrl
+                        newYarn.qty = qty
+                        newYarn.notes = notes
                         
+                        $yarnCollection.append(newYarn)
+                        
+                        dismissYarnSheet()
                     } label: {
                         Label("", systemImage: "checkmark")
                             .labelStyle(.iconOnly)
                     }
                     .padding()
-                    .disabled(brand.isEmpty || name.isEmpty || colour.isEmpty || qty < 1)
+                    .disabled(brand.isEmpty || name.isEmpty || colour.isEmpty || qty < 1 || colourFamily == ColourTypes.unknown || yarnWeight == YarnTypes.unknown)
                 }
             })
             .navigationTitle("New Yarn")

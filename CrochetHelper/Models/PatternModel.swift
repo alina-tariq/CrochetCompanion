@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import RealmSwift
 
 enum HookSizes: String, CaseIterable, Identifiable {
     var id: String {
         self.rawValue
     }
-    
+    case unknown = "Choose a hook size"
     case b = "B/1 - 2.25 mm"
     case c = "C/2 - 2.75 mm"
     case d = "D/3 - 3.25 mm"
@@ -32,6 +33,7 @@ enum YarnTypes: String, CaseIterable, Identifiable {
         self.rawValue
     }
     
+    case unknown = "Choose a yarn weight"
     case lace = "0 - Lace"
     case superFine = "1 - Super Fine"
     case fine = "2 - Fine"
@@ -44,14 +46,18 @@ enum YarnTypes: String, CaseIterable, Identifiable {
 
 // TODO: consider changing to a class if adding a start project from pattern button
 
-struct Pattern: Identifiable {
-    let id = UUID()
-    let name: String
-    let imageUrl: String // TODO: use local images
-    let hook: HookSizes.RawValue // TODO: support multiple hook sizes, allow filtering
-    let yarnWeight: YarnTypes.RawValue // TODO: support multiple weights, allow filtering
-    let stitches: String // TODO: populate from glossary terms, connect to definition
-    let patternUrl: String
-    let pattern: String
-    let notes: String
+class Pattern: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var name: String
+    // TODO: use local images
+    @Persisted var imageUrl: String = "https://images.unsplash.com/photo-1605735940798-5201db29e5e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+    // TODO: support multiple hook sizes, allow filtering
+    @Persisted var hook: HookSizes.RawValue = ""
+    // TODO: support multiple weights, allow filtering
+    @Persisted var yarnWeight: YarnTypes.RawValue = ""
+    // TODO: populate from glossary terms, connect to definition
+    @Persisted var stitches: String
+    @Persisted var patternUrl: String
+    @Persisted var instructions: String
+    @Persisted var notes: String
 }

@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct NewPatternView: View {
     @State private var name: String = ""
     @State private var imageUrl: String = ""
-    @State private var hook: HookSizes = HookSizes.b
-    @State private var yarnType: YarnTypes = YarnTypes.lace
+    @State private var hook: HookSizes = HookSizes.unknown
+    @State private var yarnWeight: YarnTypes = YarnTypes.unknown
     @State private var stitches: String = ""
     @State private var patternUrl: String = ""
-    @State private var pattern: String = ""
+    @State private var instructions: String = ""
     @State private var notes: String = ""
+    
+    @ObservedResults(Pattern.self) var patterns
     
     @Environment(\.dismiss) var dismissPatternSheet
     
@@ -31,7 +34,7 @@ struct NewPatternView: View {
                 }
                 
                 Section(header: Text("Hook Size")) {
-                    Picker("", selection: $hook) {
+                    Picker("Choose a hook size", selection: $hook) {
                         ForEach(HookSizes.allCases) { hook in
                             Text(hook.id)
                                 .tag(hook)
@@ -42,9 +45,10 @@ struct NewPatternView: View {
                 }
                 
                 Section(header: Text("Yarn Weight")) {
-                    Picker("", selection: $yarnType) {
-                        ForEach(YarnTypes.allCases) { yarnType in Text(yarnType.id)
-                                .tag(yarnType)
+                    Picker("Choose a yarn weight", selection: $yarnWeight) {
+                        ForEach(YarnTypes.allCases) { yarnWeight in
+                            Text(yarnWeight.id)
+                                .tag(yarnWeight)
                                 
                         }
                     }
@@ -60,7 +64,7 @@ struct NewPatternView: View {
                 }
                 
                 Section(header: Text("Pattern *")) {
-                    TextEditor(text: $pattern)
+                    TextEditor(text: $instructions)
                         .frame(minHeight: 60)
                 }
                 Section(header: Text("Additional Notes")) {
@@ -80,13 +84,34 @@ struct NewPatternView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
+                        let newPattern = Pattern()
+                        newPattern.name = name
+                        newPattern.instructions = instructions
+                        newPattern.stitches = stitches
+                        newPattern.patternUrl = patternUrl
+                        newPattern.notes = notes
                         
+                        if (imageUrl != "") {
+                            newPattern.imageUrl = imageUrl
+                        }
+                        
+                        if (hook != HookSizes.unknown) {
+                            newPattern.hook = hook.id
+                        }
+                        
+                        if (yarnWeight != YarnTypes.unknown) {
+                            newPattern.yarnWeight = yarnWeight.id
+                        }
+                        
+                        $patterns.append(newPattern)
+                        
+                        dismissPatternSheet()
                     } label: {
                         Label("", systemImage: "checkmark")
                             .labelStyle(.iconOnly)
                     }
                     .padding()
-                    .disabled(name.isEmpty || pattern.isEmpty)
+                    .disabled(name.isEmpty || instructions.isEmpty)
                 }
             })
             .navigationTitle("Create New Pattern")

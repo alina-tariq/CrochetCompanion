@@ -11,11 +11,11 @@
 		C73F60E82A8442FD00A30380 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60E72A8442FD00A30380 /* ContentView.swift */; };
 		C73F60EA2A8442FE00A30380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60E92A8442FE00A30380 /* Assets.xcassets */; };
 		C73F60ED2A8442FE00A30380 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60EC2A8442FE00A30380 /* Preview Assets.xcassets */; };
-		C73F60FA2A84532300A30380 /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60F92A84532300A30380 /* PatternsView.swift */; };
+		C73F60FA2A84532300A30380 /* AllPatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60F92A84532300A30380 /* AllPatternsView.swift */; };
 		C73F60FC2A84533C00A30380 /* NewPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FB2A84533C00A30380 /* NewPatternView.swift */; };
-		C73F60FE2A84535100A30380 /* YarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FD2A84535100A30380 /* YarnView.swift */; };
+		C73F60FE2A84535100A30380 /* YarnCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FD2A84535100A30380 /* YarnCollectionView.swift */; };
 		C73F61002A84535C00A30380 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FF2A84535C00A30380 /* SettingsView.swift */; };
-		C73F61022A84536C00A30380 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61012A84536C00A30380 /* ProjectsView.swift */; };
+		C73F61022A84536C00A30380 /* AllProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61012A84536C00A30380 /* AllProjectsView.swift */; };
 		C73F61042A8453A200A30380 /* GlossaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61032A8453A200A30380 /* GlossaryView.swift */; };
 		C73F610A2A84570500A30380 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61092A84570500A30380 /* TabBar.swift */; };
 		C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610B2A847A1A00A30380 /* PatternModel.swift */; };
@@ -26,6 +26,12 @@
 		C73F61182A85877100A30380 /* NewTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61172A85877100A30380 /* NewTermView.swift */; };
 		C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61192A85877D00A30380 /* NewProjectView.swift */; };
 		C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */; };
+		C7FDB2102A86BE6A00C06EA4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB20F2A86BE6A00C06EA4 /* Realm */; };
+		C7FDB2122A86BE6A00C06EA4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB2112A86BE6A00C06EA4 /* RealmSwift */; };
+		C7FDB2152A86ED1400C06EA4 /* PatternCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */; };
+		C7FDB2172A86EDD300C06EA4 /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */; };
+		C7FDB2192A86EDDB00C06EA4 /* YarnCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2182A86EDDB00C06EA4 /* YarnCard.swift */; };
+		C7FDB21B2A86EDE600C06EA4 /* TermCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB21A2A86EDE600C06EA4 /* TermCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +40,11 @@
 		C73F60E72A8442FD00A30380 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C73F60E92A8442FE00A30380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C73F60EC2A8442FE00A30380 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C73F60F92A84532300A30380 /* PatternsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsView.swift; sourceTree = "<group>"; };
+		C73F60F92A84532300A30380 /* AllPatternsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPatternsView.swift; sourceTree = "<group>"; };
 		C73F60FB2A84533C00A30380 /* NewPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatternView.swift; sourceTree = "<group>"; };
-		C73F60FD2A84535100A30380 /* YarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnView.swift; sourceTree = "<group>"; };
+		C73F60FD2A84535100A30380 /* YarnCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnCollectionView.swift; sourceTree = "<group>"; };
 		C73F60FF2A84535C00A30380 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		C73F61012A84536C00A30380 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		C73F61012A84536C00A30380 /* AllProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProjectsView.swift; sourceTree = "<group>"; };
 		C73F61032A8453A200A30380 /* GlossaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryView.swift; sourceTree = "<group>"; };
 		C73F61092A84570500A30380 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		C73F610B2A847A1A00A30380 /* PatternModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternModel.swift; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		C73F61172A85877100A30380 /* NewTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTermView.swift; sourceTree = "<group>"; };
 		C73F61192A85877D00A30380 /* NewProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectView.swift; sourceTree = "<group>"; };
 		C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadView.swift; sourceTree = "<group>"; };
+		C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCard.swift; sourceTree = "<group>"; };
+		C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
+		C7FDB2182A86EDDB00C06EA4 /* YarnCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnCard.swift; sourceTree = "<group>"; };
+		C7FDB21A2A86EDE600C06EA4 /* TermCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FDB2122A86BE6A00C06EA4 /* RealmSwift in Frameworks */,
+				C7FDB2102A86BE6A00C06EA4 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +114,7 @@
 		C73F60F32A8443E300A30380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C7FDB2132A86E9AE00C06EA4 /* Components */,
 				C73F61152A85871F00A30380 /* New */,
 				C73F60F62A84442600A30380 /* Main */,
 			);
@@ -131,10 +144,10 @@
 			children = (
 				C73F60E72A8442FD00A30380 /* ContentView.swift */,
 				C73F61092A84570500A30380 /* TabBar.swift */,
-				C73F60F92A84532300A30380 /* PatternsView.swift */,
-				C73F60FD2A84535100A30380 /* YarnView.swift */,
+				C73F60F92A84532300A30380 /* AllPatternsView.swift */,
+				C73F60FD2A84535100A30380 /* YarnCollectionView.swift */,
 				C73F60FF2A84535C00A30380 /* SettingsView.swift */,
-				C73F61012A84536C00A30380 /* ProjectsView.swift */,
+				C73F61012A84536C00A30380 /* AllProjectsView.swift */,
 				C73F61032A8453A200A30380 /* GlossaryView.swift */,
 				C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */,
 			);
@@ -150,6 +163,17 @@
 				C73F61192A85877D00A30380 /* NewProjectView.swift */,
 			);
 			path = New;
+			sourceTree = "<group>";
+		};
+		C7FDB2132A86E9AE00C06EA4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */,
+				C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */,
+				C7FDB2182A86EDDB00C06EA4 /* YarnCard.swift */,
+				C7FDB21A2A86EDE600C06EA4 /* TermCard.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +192,10 @@
 			dependencies = (
 			);
 			name = CrochetHelper;
+			packageProductDependencies = (
+				C7FDB20F2A86BE6A00C06EA4 /* Realm */,
+				C7FDB2112A86BE6A00C06EA4 /* RealmSwift */,
+			);
 			productName = "Crochet Helper";
 			productReference = C73F60E22A8442FD00A30380 /* CrochetHelper.app */;
 			productType = "com.apple.product-type.application";
@@ -196,6 +224,9 @@
 				Base,
 			);
 			mainGroup = C73F60D92A8442FD00A30380;
+			packageReferences = (
+				C7FDB20E2A86BE6A00C06EA4 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = C73F60E32A8442FD00A30380 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,11 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C73F61122A856E3D00A30380 /* ProjectModel.swift in Sources */,
-				C73F61022A84536C00A30380 /* ProjectsView.swift in Sources */,
+				C73F61022A84536C00A30380 /* AllProjectsView.swift in Sources */,
 				C73F610E2A856E2700A30380 /* YarnModel.swift in Sources */,
-				C73F60FA2A84532300A30380 /* PatternsView.swift in Sources */,
+				C73F60FA2A84532300A30380 /* AllPatternsView.swift in Sources */,
 				C73F61102A856E3400A30380 /* GlossaryTermModel.swift in Sources */,
 				C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */,
+				C7FDB2192A86EDDB00C06EA4 /* YarnCard.swift in Sources */,
+				C7FDB2172A86EDD300C06EA4 /* ProjectCard.swift in Sources */,
 				C73F60E82A8442FD00A30380 /* ContentView.swift in Sources */,
 				C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */,
 				C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */,
@@ -236,9 +269,11 @@
 				C73F61002A84535C00A30380 /* SettingsView.swift in Sources */,
 				C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */,
 				C73F60E62A8442FD00A30380 /* CrochetHelperApp.swift in Sources */,
-				C73F60FE2A84535100A30380 /* YarnView.swift in Sources */,
+				C73F60FE2A84535100A30380 /* YarnCollectionView.swift in Sources */,
+				C7FDB21B2A86EDE600C06EA4 /* TermCard.swift in Sources */,
 				C73F610A2A84570500A30380 /* TabBar.swift in Sources */,
 				C73F61182A85877100A30380 /* NewTermView.swift in Sources */,
+				C7FDB2152A86ED1400C06EA4 /* PatternCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +476,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7FDB20E2A86BE6A00C06EA4 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7FDB20F2A86BE6A00C06EA4 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7FDB20E2A86BE6A00C06EA4 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		C7FDB2112A86BE6A00C06EA4 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7FDB20E2A86BE6A00C06EA4 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C73F60DA2A8442FD00A30380 /* Project object */;
 }

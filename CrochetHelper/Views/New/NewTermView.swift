@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct NewTermView: View {
     @State private var name: String = ""
     @State private var instructions: String = ""
     @State private var imageUrl: String = ""
     @State private var videoUrl: String = ""
+    
+    @ObservedResults(GlossaryTerm.self) var terms
     
     @Environment(\.dismiss) var dismissTermSheet
     
@@ -23,7 +26,8 @@ struct NewTermView: View {
                 }
                 
                 Section(header: Text("Instructions *")) {
-                    TextField("", text: $instructions)
+                    TextEditor(text: $instructions)
+                        .frame(minHeight: 60)
                 }
                 
                 // TODO: save images locally
@@ -47,7 +51,15 @@ struct NewTermView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
+                        let newTerm = GlossaryTerm()
+                        newTerm.name = name
+                        newTerm.instructions = instructions
+                        newTerm.imageUrl = imageUrl
+                        newTerm.videoUrl = videoUrl
                         
+                        $terms.append(newTerm)
+                        
+                        dismissTermSheet()
                     } label: {
                         Label("", systemImage: "checkmark")
                             .labelStyle(.iconOnly)
