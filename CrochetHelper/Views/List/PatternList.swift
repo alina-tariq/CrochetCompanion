@@ -24,7 +24,9 @@ struct PatternList: View {
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
                 ForEach(patterns) { pattern in
-                    PatternCard(pattern: pattern)
+                    NavigationLink(destination: PatternView(pattern: pattern)) {
+                        PatternCard(pattern: pattern)
+                    }
                 }
             }
             .padding(.top)

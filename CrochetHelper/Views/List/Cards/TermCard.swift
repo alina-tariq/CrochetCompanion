@@ -12,12 +12,18 @@ struct TermCard: View {
     var term: GlossaryTerm
     
     var body: some View {
-        Text(term.name)
-            .font(.title3)
-            .fontWeight(.medium)
-        Text(term.instructions)
-            .font(.callout)
-            .fontWeight(.medium)
+        VStack (spacing: 5) {
+            Text(term.name)
+                .font(.title3)
+                .fontWeight(.medium)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Text(term.instructions)
+                .font(.callout)
+                .fontWeight(.medium)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(.vertical)
     }
 }
 

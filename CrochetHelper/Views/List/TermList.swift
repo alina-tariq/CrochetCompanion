@@ -26,7 +26,9 @@ struct TermList: View {
             
             List {
                 ForEach(terms) { term in
-                    TermCard(term: term)
+                    NavigationLink(destination: TermView(term: term)) {
+                        TermCard(term: term)
+                    }
                 }
             }
             .listStyle(.plain)

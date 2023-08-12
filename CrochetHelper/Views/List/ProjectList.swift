@@ -24,7 +24,9 @@ struct ProjectList: View {
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
                 ForEach(projects) { project in
-                    ProjectCard(project: project)
+                    NavigationLink(destination: ProjectView(project: project)) {
+                        ProjectCard(project: project)
+                    }
                 }
             }
             .padding(.top)

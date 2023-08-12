@@ -24,7 +24,9 @@ struct YarnList: View {
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
                 ForEach(yarns) { yarn in
-                    YarnCard(yarn: yarn)
+                    NavigationLink(destination: YarnView(yarn: yarn)) {
+                        YarnCard(yarn: yarn)
+                    }
                 }
             }
             .padding(.top)

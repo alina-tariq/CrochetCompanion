@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Realm
 import RealmSwift
 
 struct PatternCard: View {
