@@ -9,12 +9,12 @@ import SwiftUI
 import RealmSwift
 
 struct ProjectList: View {
-    @ObservedResults(Project.self) var projects
+    @StateObject var projectVM = ProjectViewModel()
     
     var body: some View {
         VStack {
             HStack {
-                Text("\(projects.count) \(projects.count == 1 ? "project" : "projects")")
+                Text("\(projectVM.projects.count) \(projectVM.projects.count == 1 ? "project" : "projects")")
                 .font(.headline)
                 .fontWeight(.medium)
                 .opacity(0.6)
@@ -23,7 +23,7 @@ struct ProjectList: View {
             }
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
-                ForEach(projects) { project in
+                ForEach(projectVM.projects) { project in
                     NavigationLink(destination: ProjectView(project: project)) {
                         ProjectCard(project: project)
                     }

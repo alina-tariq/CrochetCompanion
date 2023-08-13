@@ -60,4 +60,16 @@ class Pattern: Object, ObjectKeyIdentifiable {
     @Persisted var patternUrl: String
     @Persisted var instructions: String
     @Persisted var notes: String
+    
+    convenience init(name: String, imageUrl: String, hook: HookSizes.RawValue, yarnWeight: YarnTypes.RawValue, stitches: String, patternUrl: String, instructions: String, notes: String) {
+        self.init()
+        self.name = name
+        self.imageUrl = imageUrl
+        self.hook = hook
+        self.yarnWeight = yarnWeight
+        self.stitches = stitches
+        self.patternUrl = patternUrl
+        self.instructions = instructions
+        self.notes = notes
+    }
 }

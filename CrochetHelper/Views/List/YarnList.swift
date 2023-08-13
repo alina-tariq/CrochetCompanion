@@ -9,12 +9,12 @@ import SwiftUI
 import RealmSwift
 
 struct YarnList: View {
-    @ObservedResults(Yarn.self) var yarns
+    @StateObject var yarnVM = YarnViewModel()
     
     var body: some View {
         VStack {
             HStack {
-                Text("Count: \(yarns.count)")
+                Text("Count: \(yarnVM.yarns.count)")
                     .font(.headline)
                     .fontWeight(.medium)
                     .opacity(0.6)
@@ -23,7 +23,7 @@ struct YarnList: View {
             }
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
-                ForEach(yarns) { yarn in
+                ForEach(yarnVM.yarns) { yarn in
                     NavigationLink(destination: YarnView(yarn: yarn)) {
                         YarnCard(yarn: yarn)
                     }

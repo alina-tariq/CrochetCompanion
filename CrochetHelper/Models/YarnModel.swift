@@ -39,4 +39,17 @@ class Yarn: Object, ObjectKeyIdentifiable {
     @Persisted var imageUrl: String
     @Persisted var qty: Int 
     @Persisted var notes: String
+    
+    convenience init(brand: String, name: String, colour: String, colourFamily: ColourTypes.RawValue, yarnWeight: YarnTypes.RawValue, dyeLot: String, imageUrl: String, qty: Int, notes: String) {
+        self.init()
+        self.brand = brand
+        self.name = name
+        self.colour = colour
+        self.colourFamily = colourFamily
+        self.yarnWeight = yarnWeight
+        self.dyeLot = dyeLot
+        self.imageUrl = imageUrl
+        self.qty = qty
+        self.notes = notes
+    }
 }

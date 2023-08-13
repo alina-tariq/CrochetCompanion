@@ -9,7 +9,7 @@ import SwiftUI
 import RealmSwift
 
 struct TermCard: View {
-    var term: GlossaryTerm
+    var term: Term
     
     var body: some View {
         VStack (spacing: 5) {
@@ -29,6 +29,6 @@ struct TermCard: View {
 
 struct TermCard_Previews: PreviewProvider {
     static var previews: some View {
-        TermCard(term: GlossaryTerm())
+        TermCard(term: Term())
     }
 }

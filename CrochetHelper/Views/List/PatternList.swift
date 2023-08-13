@@ -9,12 +9,13 @@ import SwiftUI
 import RealmSwift
 
 struct PatternList: View {
-    @ObservedResults(Pattern.self) var patterns
+    
+    @StateObject var patternVM = PatternViewModel()
     
     var body: some View {
         VStack {
             HStack {
-                Text("\(patterns.count) \(patterns.count == 1 ? "pattern" : "patterns")")
+                Text("\(patternVM.patterns.count) \(patternVM.patterns.count == 1 ? "pattern" : "patterns")")
                     .font(.headline)
                     .fontWeight(.medium)
                     .opacity(0.6)
@@ -23,7 +24,7 @@ struct PatternList: View {
             }
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
-                ForEach(patterns) { pattern in
+                ForEach(patternVM.patterns) { pattern in
                     NavigationLink(destination: PatternView(pattern: pattern)) {
                         PatternCard(pattern: pattern)
                     }

@@ -22,6 +22,19 @@ class Project: Object, ObjectKeyIdentifiable {
     @Persisted var instructions: String
     @Persisted var notes: String
     @Persisted var finished: Bool = false
+    
+    convenience init(name: String, imageUrl: String, yarn: String, stitches: String,
+                     patternUrl: String, instructions: String, notes: String, finished: Bool) {
+        self.init()
+        self.name = name
+        self.imageUrl = imageUrl
+        self.yarn = yarn
+        self.stitches = stitches
+        self.patternUrl = patternUrl
+        self.instructions = instructions
+        self.notes = notes
+        self.finished = finished
+    }
 }
 
 

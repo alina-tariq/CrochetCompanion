@@ -20,7 +20,7 @@
 		C73F610A2A84570500A30380 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61092A84570500A30380 /* TabBar.swift */; };
 		C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610B2A847A1A00A30380 /* PatternModel.swift */; };
 		C73F610E2A856E2700A30380 /* YarnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610D2A856E2700A30380 /* YarnModel.swift */; };
-		C73F61102A856E3400A30380 /* GlossaryTermModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610F2A856E3400A30380 /* GlossaryTermModel.swift */; };
+		C73F61102A856E3400A30380 /* TermModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610F2A856E3400A30380 /* TermModel.swift */; };
 		C73F61122A856E3D00A30380 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61112A856E3D00A30380 /* ProjectModel.swift */; };
 		C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61132A8586FB00A30380 /* NewYarnView.swift */; };
 		C73F61182A85877100A30380 /* NewTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61172A85877100A30380 /* NewTermView.swift */; };
@@ -30,6 +30,10 @@
 		C75364782A880665003403B8 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364772A880665003403B8 /* ProjectView.swift */; };
 		C753647A2A88066E003403B8 /* YarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364792A88066E003403B8 /* YarnView.swift */; };
 		C753647C2A88067B003403B8 /* TermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753647B2A88067B003403B8 /* TermView.swift */; };
+		C75364812A8859BB003403B8 /* PatternViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364802A8859BB003403B8 /* PatternViewModel.swift */; };
+		C75364832A886164003403B8 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364822A886164003403B8 /* ProjectViewModel.swift */; };
+		C75364852A8861C4003403B8 /* YarnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364842A8861C4003403B8 /* YarnViewModel.swift */; };
+		C75364872A8861CC003403B8 /* TermViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364862A8861CC003403B8 /* TermViewModel.swift */; };
 		C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */; };
 		C7FDB2102A86BE6A00C06EA4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB20F2A86BE6A00C06EA4 /* Realm */; };
 		C7FDB2122A86BE6A00C06EA4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB2112A86BE6A00C06EA4 /* RealmSwift */; };
@@ -58,7 +62,7 @@
 		C73F61092A84570500A30380 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		C73F610B2A847A1A00A30380 /* PatternModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternModel.swift; sourceTree = "<group>"; };
 		C73F610D2A856E2700A30380 /* YarnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnModel.swift; sourceTree = "<group>"; };
-		C73F610F2A856E3400A30380 /* GlossaryTermModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTermModel.swift; sourceTree = "<group>"; };
+		C73F610F2A856E3400A30380 /* TermModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermModel.swift; sourceTree = "<group>"; };
 		C73F61112A856E3D00A30380 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		C73F61132A8586FB00A30380 /* NewYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYarnView.swift; sourceTree = "<group>"; };
 		C73F61172A85877100A30380 /* NewTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTermView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,10 @@
 		C75364772A880665003403B8 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		C75364792A88066E003403B8 /* YarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnView.swift; sourceTree = "<group>"; };
 		C753647B2A88067B003403B8 /* TermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermView.swift; sourceTree = "<group>"; };
+		C75364802A8859BB003403B8 /* PatternViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternViewModel.swift; sourceTree = "<group>"; };
+		C75364822A886164003403B8 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		C75364842A8861C4003403B8 /* YarnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnViewModel.swift; sourceTree = "<group>"; };
+		C75364862A8861CC003403B8 /* TermViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewModel.swift; sourceTree = "<group>"; };
 		C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadView.swift; sourceTree = "<group>"; };
 		C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCard.swift; sourceTree = "<group>"; };
 		C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
@@ -143,6 +151,10 @@
 		C73F60F42A8443FE00A30380 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C75364802A8859BB003403B8 /* PatternViewModel.swift */,
+				C75364822A886164003403B8 /* ProjectViewModel.swift */,
+				C75364842A8861C4003403B8 /* YarnViewModel.swift */,
+				C75364862A8861CC003403B8 /* TermViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -152,7 +164,7 @@
 			children = (
 				C73F610B2A847A1A00A30380 /* PatternModel.swift */,
 				C73F610D2A856E2700A30380 /* YarnModel.swift */,
-				C73F610F2A856E3400A30380 /* GlossaryTermModel.swift */,
+				C73F610F2A856E3400A30380 /* TermModel.swift */,
 				C73F61112A856E3D00A30380 /* ProjectModel.swift */,
 			);
 			path = Models;
@@ -300,9 +312,10 @@
 				C73F61122A856E3D00A30380 /* ProjectModel.swift in Sources */,
 				C73F61022A84536C00A30380 /* AllProjectsView.swift in Sources */,
 				C73F610E2A856E2700A30380 /* YarnModel.swift in Sources */,
+				C75364832A886164003403B8 /* ProjectViewModel.swift in Sources */,
 				C75364762A880659003403B8 /* PatternView.swift in Sources */,
 				C73F60FA2A84532300A30380 /* AllPatternsView.swift in Sources */,
-				C73F61102A856E3400A30380 /* GlossaryTermModel.swift in Sources */,
+				C73F61102A856E3400A30380 /* TermModel.swift in Sources */,
 				C753647A2A88066E003403B8 /* YarnView.swift in Sources */,
 				C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */,
 				C7FDB2192A86EDDB00C06EA4 /* YarnCard.swift in Sources */,
@@ -311,11 +324,13 @@
 				C753647C2A88067B003403B8 /* TermView.swift in Sources */,
 				C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */,
 				C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */,
+				C75364872A8861CC003403B8 /* TermViewModel.swift in Sources */,
 				C73F60FC2A84533C00A30380 /* NewPatternView.swift in Sources */,
 				C7FDB21E2A8718FC00C06EA4 /* PatternList.swift in Sources */,
 				C73F61042A8453A200A30380 /* GlossaryView.swift in Sources */,
 				C73F61002A84535C00A30380 /* SettingsView.swift in Sources */,
 				C7FDB2202A871F9D00C06EA4 /* ProjectList.swift in Sources */,
+				C75364852A8861C4003403B8 /* YarnViewModel.swift in Sources */,
 				C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */,
 				C73F60E62A8442FD00A30380 /* CrochetHelperApp.swift in Sources */,
 				C73F60FE2A84535100A30380 /* YarnCollectionView.swift in Sources */,
@@ -324,6 +339,7 @@
 				C73F610A2A84570500A30380 /* TabBar.swift in Sources */,
 				C73F61182A85877100A30380 /* NewTermView.swift in Sources */,
 				C75364782A880665003403B8 /* ProjectView.swift in Sources */,
+				C75364812A8859BB003403B8 /* PatternViewModel.swift in Sources */,
 				C7FDB2152A86ED1400C06EA4 /* PatternCard.swift in Sources */,
 				C7FDB2222A871FA500C06EA4 /* YarnList.swift in Sources */,
 			);

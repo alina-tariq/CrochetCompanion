@@ -14,7 +14,7 @@ struct NewTermView: View {
     @State private var imageUrl: String = ""
     @State private var videoUrl: String = ""
     
-    @ObservedResults(GlossaryTerm.self) var terms
+    @ObservedResults(Term.self) var terms
     
     @Environment(\.dismiss) var dismissTermSheet
     
@@ -51,7 +51,7 @@ struct NewTermView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        let newTerm = GlossaryTerm()
+                        let newTerm = Term()
                         newTerm.name = name
                         newTerm.instructions = instructions
                         newTerm.imageUrl = imageUrl
