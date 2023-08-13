@@ -9,7 +9,7 @@ import SwiftUI
 import YouTubePlayerKit
 
 struct TermView: View {
-    var term: GlossaryTerm
+    var term: Term
     @State private var editTerm = false
     @State private var goBack = false
     
@@ -107,6 +107,6 @@ struct TermView: View {
 
 struct TermView_Previews: PreviewProvider {
     static var previews: some View {
-        TermView(term: GlossaryTerm())
+        TermView(term: Term())
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import RealmSwift
 
 struct EditTermView: View {
-    @ObservedRealmObject var term: GlossaryTerm
+    @ObservedRealmObject var term: Term
     
     @State private var name: String = ""
     @State private var instructions: String = ""
@@ -91,6 +91,6 @@ struct EditTermView: View {
 
 struct EditTermView_Previews: PreviewProvider {
     static var previews: some View {
-        EditTermView(term: GlossaryTerm())
+        EditTermView(term: Term())
     }
 }

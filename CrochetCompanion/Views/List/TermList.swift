@@ -9,7 +9,7 @@ import SwiftUI
 import RealmSwift
 
 struct TermList: View {
-    @ObservedResults(GlossaryTerm.self, sortDescriptor: SortDescriptor(keyPath: "name", ascending: true)) var terms
+    @ObservedResults(Term.self, sortDescriptor: SortDescriptor(keyPath: "name", ascending: true)) var terms
     @Environment(\.defaultMinListRowHeight) var minRowHeight
     
     var body: some View {

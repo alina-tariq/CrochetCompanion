@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class GlossaryTerm: Object, ObjectKeyIdentifiable {
+class Term: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var name: String
     @Persisted var instructions: String
