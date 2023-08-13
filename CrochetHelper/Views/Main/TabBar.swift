@@ -36,11 +36,11 @@ struct TabBar: View {
                     Text("Glossary")
                 }
             
-            SettingsView()
-                .tabItem {
-                    Image("Settings")
-                    Text("Settings")
-                }
+//            SettingsView()
+//                .tabItem {
+//                    Image("Settings")
+//                    Text("Settings")
+//                }
         }
     }
 }
