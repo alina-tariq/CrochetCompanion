@@ -26,6 +26,7 @@ struct YarnCollectionView: View {
                     .padding()
                 }
             })
+            .navigationBarBackButtonHidden()
             .navigationTitle("Yarn Collection")
             .sheet(isPresented: $addYarn) {
                 NewYarnView()

@@ -10,6 +10,7 @@ import SwiftUI
 struct YarnView: View {
     var yarn: Yarn
     @State private var editYarn = false
+    @State private var goBack = false
     
     var body: some View {
         ScrollView {
@@ -85,20 +86,43 @@ struct YarnView: View {
                 
             }
             .padding(.horizontal)
+            
+            NavigationStack {
+                VStack {
+                    Button {
+                        let thawedPattern = yarn.thaw()
+                        if thawedPattern!.isInvalidated == false { //ensure it's a valid item
+                            
+                            let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
+                            
+                            try! thawedRealm.write {
+                                thawedRealm.delete(thawedPattern!)
+                            }
+                        }
+                        self.goBack = true
+                    } label: {
+                        Text("Delete Yarn")
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+            }
+            .navigationDestination(isPresented: $goBack) {
+                YarnCollectionView()
+            }
         }
-//        .toolbar(content: {
-//            ToolbarItem(placement: .navigationBarTrailing) {
-//                Button {
-//                    editYarn = true
-//                } label: {
-//                    Text("Edit")
-//                }
-//                .padding()
-//            }
-//        })
-//        .sheet(isPresented: $editYarn) {
-//            NewYarnView()
-//        }
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    editYarn = true
+                } label: {
+                    Text("Edit")
+                }
+                .padding()
+            }
+        })
+        .sheet(isPresented: $editYarn) {
+            EditYarnView(yarn: yarn)
+        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }

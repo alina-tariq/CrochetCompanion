@@ -10,6 +10,7 @@ import SwiftUI
 struct ProjectView: View {
     var project: Project
     @State private var editProject = false
+    @State private var goBack = false
     
     var body: some View {
         ScrollView {
@@ -89,20 +90,43 @@ struct ProjectView: View {
                 
             }
             .padding(.horizontal)
+            
+            NavigationStack {
+                VStack {
+                    Button {
+                        let thawedPattern = project.thaw()
+                        if thawedPattern!.isInvalidated == false { //ensure it's a valid item
+                            
+                            let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
+                            
+                            try! thawedRealm.write {
+                                thawedRealm.delete(thawedPattern!)
+                            }
+                        }
+                        self.goBack = true
+                    } label: {
+                        Text("Delete Project")
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+            }
+            .navigationDestination(isPresented: $goBack) {
+                AllProjectsView()
+            }
         }
-//        .toolbar(content: {
-//            ToolbarItem(placement: .navigationBarTrailing) {
-//                Button {
-//                    editProject = true
-//                } label: {
-//                    Text("Edit")
-//                }
-//                .padding()
-//            }
-//        })
-//        .sheet(isPresented: $editProject) {
-//            NewProjectView()
-//        }
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    editProject = true
+                } label: {
+                    Text("Edit")
+                }
+                .padding()
+            }
+        })
+        .sheet(isPresented: $editProject) {
+            EditProjectView(project: project)
+        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }

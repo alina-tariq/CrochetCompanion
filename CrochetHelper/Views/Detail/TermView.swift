@@ -11,6 +11,7 @@ import YouTubePlayerKit
 struct TermView: View {
     var term: GlossaryTerm
     @State private var editTerm = false
+    @State private var goBack = false
     
     var body: some View {
         ScrollView {
@@ -66,20 +67,43 @@ struct TermView: View {
                 
             }
             .padding(.horizontal)
+            
+            NavigationStack {
+                VStack {
+                    Button {
+                        let thawedPattern = term.thaw()
+                        if thawedPattern!.isInvalidated == false { //ensure it's a valid item
+                            
+                            let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
+                            
+                            try! thawedRealm.write {
+                                thawedRealm.delete(thawedPattern!)
+                            }
+                        }
+                        self.goBack = true
+                    } label: {
+                        Text("Delete Term")
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+            }
+            .navigationDestination(isPresented: $goBack) {
+                GlossaryView()
+            }
         }
-//        .toolbar(content: {
-//            ToolbarItem(placement: .navigationBarTrailing) {
-//                Button {
-//                    editTerm = true
-//                } label: {
-//                    Text("Edit")
-//                }
-//                .padding()
-//            }
-//        })
-//        .sheet(isPresented: $editTerm) {
-//            NewTermView()
-//        }
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    editTerm = true
+                } label: {
+                    Text("Edit")
+                }
+                .padding()
+            }
+        })
+        .sheet(isPresented: $editTerm) {
+            EditTermView(term: term)
+        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }

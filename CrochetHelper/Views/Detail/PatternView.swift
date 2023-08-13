@@ -11,6 +11,7 @@ import RealmSwift
 struct PatternView: View {
     var pattern: Pattern
     @State private var editPattern = false
+    @State private var goBack = false
     
     var body: some View {
         ScrollView {
@@ -40,7 +41,6 @@ struct PatternView: View {
                 .padding(.horizontal)
                 .padding(.bottom)
             }
-            
             VStack(spacing: 20) {
                 VStack{
                     Text("Hook Size: ")
@@ -89,22 +89,45 @@ struct PatternView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(.horizontal)
+            
+            NavigationStack {
+                VStack {
+                    Button {
+                        let thawedPattern = pattern.thaw()
+                        if thawedPattern!.isInvalidated == false { //ensure it's a valid item
+                            
+                            let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
+                            
+                            try! thawedRealm.write {
+                                thawedRealm.delete(thawedPattern!)
+                            }
+                        }
+                        self.goBack = true
+                    } label: {
+                        Text("Delete Pattern")
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+            }
+            .navigationDestination(isPresented: $goBack) {
+                AllPatternsView()
+            }
         }
-//        .toolbar(content: {
-//            ToolbarItem(placement: .navigationBarTrailing) {
-//                Button {
-//                    editPattern = true
-//                } label: {
-//                    Text("Edit")
-//                }
-//                .padding()
-//            }
-//        })
-//        .sheet(isPresented: $editPattern) {
-//            NewPatternView()
-//        }
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    editPattern = true
+                } label: {
+                    Text("Edit")
+                }
+                .padding()
+            }
+        })
+        .sheet(isPresented: $editPattern) {
+            EditPatternView(pattern: pattern)
+        }
         .navigationBarTitleDisplayMode(.inline)
-    }
+}
 }
 
 struct PatternView_Previews: PreviewProvider {

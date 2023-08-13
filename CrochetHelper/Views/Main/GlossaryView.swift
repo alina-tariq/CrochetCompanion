@@ -24,6 +24,7 @@ struct GlossaryView: View {
                     .padding()
                 }
             })
+            .navigationBarBackButtonHidden()
             .navigationTitle("Glossary Terms")
             .sheet(isPresented: $addTerm) {
                 NewTermView()

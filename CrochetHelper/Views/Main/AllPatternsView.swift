@@ -26,6 +26,7 @@ struct AllPatternsView: View {
                     .padding()
                 }
             })
+            .navigationBarBackButtonHidden()
             .navigationTitle("Patterns")
             .sheet(isPresented: $addPattern) {
                 NewPatternView()
