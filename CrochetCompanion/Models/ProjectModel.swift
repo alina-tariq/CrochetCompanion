@@ -10,7 +10,7 @@ import RealmSwift
 
 // TODO: add progress tracker
 class Project: Object, ObjectKeyIdentifiable {
-    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted(primaryKey: true) var id: String = UUID().uuidString
     @Persisted var name: String
     // TODO: see PatternModel
     @Persisted var imageUrl: String

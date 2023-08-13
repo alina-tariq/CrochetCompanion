@@ -28,7 +28,7 @@ enum ColourTypes: String, CaseIterable, Identifiable {
 }
 
 class Yarn: Object, ObjectKeyIdentifiable {
-    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted(primaryKey: true) var id: String = UUID().uuidString
     @Persisted var brand: String
     @Persisted var name: String
     @Persisted var colour: String

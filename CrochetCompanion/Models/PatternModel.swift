@@ -47,7 +47,7 @@ enum YarnTypes: String, CaseIterable, Identifiable {
 // TODO: consider changing to a class if adding a start project from pattern button
 
 class Pattern: Object, ObjectKeyIdentifiable {
-    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted(primaryKey: true) var id: String = UUID().uuidString
     @Persisted var name: String
     // TODO: use local images
     @Persisted var imageUrl: String
