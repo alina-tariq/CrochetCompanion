@@ -56,11 +56,11 @@ struct EditPatternView: View {
                 
                 Section(header: Text("Pattern *")) {
                     TextEditor(text: $pattern.instructions)
-                        .frame(minHeight: 60)
+                        .frame(minHeight: 60, maxHeight: 100)
                 }
                 Section(header: Text("Additional Notes")) {
                     TextEditor(text: $pattern.notes)
-                        .frame(minHeight: 60)
+                        .frame(minHeight: 60, maxHeight: 100)
                         
                 }
             }

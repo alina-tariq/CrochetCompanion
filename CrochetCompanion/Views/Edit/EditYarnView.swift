@@ -69,7 +69,7 @@ struct EditYarnView: View {
                 }
                 Section(header: Text("Additional Notes")) {
                     TextEditor(text: $yarn.notes)
-                        .frame(minHeight: 50)
+                        .frame(minHeight: 50, maxHeight: 100)
                         
                 }
             }

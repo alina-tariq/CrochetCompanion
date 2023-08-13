@@ -42,11 +42,11 @@ struct EditProjectView: View {
                 
                 Section(header: Text("Pattern *")) {
                     TextEditor(text: $project.instructions)
-                        .frame(minHeight: 50)
+                        .frame(minHeight: 50, maxHeight: 100)
                 }
                 Section(header: Text("Additional Notes")) {
                     TextEditor(text: $project.notes)
-                        .frame(minHeight: 50)
+                        .frame(minHeight: 50, maxHeight: 100)
                     
                 }
             }

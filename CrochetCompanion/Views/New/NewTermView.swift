@@ -27,7 +27,7 @@ struct NewTermView: View {
                 
                 Section(header: Text("Instructions *")) {
                     TextEditor(text: $instructions)
-                        .frame(minHeight: 60)
+                        .frame(minHeight: 60, maxHeight: 100)
                 }
                 
                 // TODO: save images locally

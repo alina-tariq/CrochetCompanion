@@ -22,7 +22,7 @@ struct EditTermView: View {
                 
                 Section(header: Text("Instructions *")) {
                     TextEditor(text: $term.instructions)
-                        .frame(minHeight: 60)
+                        .frame(minHeight: 60, maxHeight: 100)
                 }
                 
                 // TODO: save images locally

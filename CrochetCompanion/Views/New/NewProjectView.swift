@@ -46,11 +46,11 @@ struct NewProjectView: View {
                 
                 Section(header: Text("Pattern *")) {
                     TextEditor(text: $instructions)
-                        .frame(minHeight: 50)
+                        .frame(minHeight: 50, maxHeight: 100)
                 }
                 Section(header: Text("Additional Notes")) {
                     TextEditor(text: $notes)
-                        .frame(minHeight: 50)
+                        .frame(minHeight: 50, maxHeight: 100)
                     
                 }
             }
