@@ -104,6 +104,7 @@ struct YarnView: View {
                 Text("Delete Yarn")
             }
             .buttonStyle(.borderedProminent)
+            .padding()
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {

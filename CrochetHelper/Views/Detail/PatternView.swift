@@ -107,6 +107,7 @@ struct PatternView: View {
                 Text("Delete Pattern")
             }
             .buttonStyle(.borderedProminent)
+            .padding()
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {

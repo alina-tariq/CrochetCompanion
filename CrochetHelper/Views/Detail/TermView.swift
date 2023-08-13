@@ -85,6 +85,7 @@ struct TermView: View {
                 Text("Delete Term")
             }
             .buttonStyle(.borderedProminent)
+            .padding(.bottom)
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
