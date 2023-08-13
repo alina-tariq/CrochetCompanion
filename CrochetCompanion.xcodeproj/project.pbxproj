@@ -7,49 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C73F60E62A8442FD00A30380 /* CrochetHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60E52A8442FD00A30380 /* CrochetHelperApp.swift */; };
-		C73F60E82A8442FD00A30380 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60E72A8442FD00A30380 /* ContentView.swift */; };
-		C73F60EA2A8442FE00A30380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60E92A8442FE00A30380 /* Assets.xcassets */; };
-		C73F60ED2A8442FE00A30380 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60EC2A8442FE00A30380 /* Preview Assets.xcassets */; };
-		C73F60FA2A84532300A30380 /* AllPatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60F92A84532300A30380 /* AllPatternsView.swift */; };
-		C73F60FC2A84533C00A30380 /* NewPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FB2A84533C00A30380 /* NewPatternView.swift */; };
-		C73F60FE2A84535100A30380 /* YarnCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FD2A84535100A30380 /* YarnCollectionView.swift */; };
-		C73F61002A84535C00A30380 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FF2A84535C00A30380 /* SettingsView.swift */; };
-		C73F61022A84536C00A30380 /* AllProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61012A84536C00A30380 /* AllProjectsView.swift */; };
-		C73F61042A8453A200A30380 /* GlossaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61032A8453A200A30380 /* GlossaryView.swift */; };
-		C73F610A2A84570500A30380 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61092A84570500A30380 /* TabBar.swift */; };
-		C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610B2A847A1A00A30380 /* PatternModel.swift */; };
-		C73F610E2A856E2700A30380 /* YarnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610D2A856E2700A30380 /* YarnModel.swift */; };
-		C73F61102A856E3400A30380 /* GlossaryTermModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610F2A856E3400A30380 /* GlossaryTermModel.swift */; };
-		C73F61122A856E3D00A30380 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61112A856E3D00A30380 /* ProjectModel.swift */; };
-		C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61132A8586FB00A30380 /* NewYarnView.swift */; };
-		C73F61182A85877100A30380 /* NewTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61172A85877100A30380 /* NewTermView.swift */; };
-		C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61192A85877D00A30380 /* NewProjectView.swift */; };
-		C75364732A8800C9003403B8 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = C75364722A8800C9003403B8 /* YouTubePlayerKit */; };
-		C75364762A880659003403B8 /* PatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364752A880659003403B8 /* PatternView.swift */; };
-		C75364782A880665003403B8 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364772A880665003403B8 /* ProjectView.swift */; };
-		C753647A2A88066E003403B8 /* YarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364792A88066E003403B8 /* YarnView.swift */; };
-		C753647C2A88067B003403B8 /* TermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753647B2A88067B003403B8 /* TermView.swift */; };
-		C753648A2A888D5A003403B8 /* EditPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364892A888D5A003403B8 /* EditPatternView.swift */; };
-		C753648C2A888D64003403B8 /* EditYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648B2A888D64003403B8 /* EditYarnView.swift */; };
-		C753648E2A888D6E003403B8 /* EditTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648D2A888D6E003403B8 /* EditTermView.swift */; };
-		C75364902A888D79003403B8 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648F2A888D79003403B8 /* EditProjectView.swift */; };
-		C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */; };
-		C7FDB2102A86BE6A00C06EA4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB20F2A86BE6A00C06EA4 /* Realm */; };
-		C7FDB2122A86BE6A00C06EA4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB2112A86BE6A00C06EA4 /* RealmSwift */; };
-		C7FDB2152A86ED1400C06EA4 /* PatternCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */; };
-		C7FDB2172A86EDD300C06EA4 /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */; };
-		C7FDB2192A86EDDB00C06EA4 /* YarnCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2182A86EDDB00C06EA4 /* YarnCard.swift */; };
-		C7FDB21B2A86EDE600C06EA4 /* TermCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB21A2A86EDE600C06EA4 /* TermCard.swift */; };
-		C7FDB21E2A8718FC00C06EA4 /* PatternList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB21D2A8718FC00C06EA4 /* PatternList.swift */; };
-		C7FDB2202A871F9D00C06EA4 /* ProjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB21F2A871F9D00C06EA4 /* ProjectList.swift */; };
-		C7FDB2222A871FA500C06EA4 /* YarnList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2212A871FA500C06EA4 /* YarnList.swift */; };
-		C7FDB2242A871FAD00C06EA4 /* TermList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2232A871FAD00C06EA4 /* TermList.swift */; };
+		C7AD33722A89694F00EA424A /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61112A856E3D00A30380 /* ProjectModel.swift */; };
+		C7AD33732A89694F00EA424A /* EditYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648B2A888D64003403B8 /* EditYarnView.swift */; };
+		C7AD33742A89694F00EA424A /* AllProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61012A84536C00A30380 /* AllProjectsView.swift */; };
+		C7AD33752A89694F00EA424A /* YarnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610D2A856E2700A30380 /* YarnModel.swift */; };
+		C7AD33762A89694F00EA424A /* PatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364752A880659003403B8 /* PatternView.swift */; };
+		C7AD33772A89694F00EA424A /* AllPatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60F92A84532300A30380 /* AllPatternsView.swift */; };
+		C7AD33782A89694F00EA424A /* EditTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648D2A888D6E003403B8 /* EditTermView.swift */; };
+		C7AD33792A89694F00EA424A /* GlossaryTermModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610F2A856E3400A30380 /* GlossaryTermModel.swift */; };
+		C7AD337A2A89694F00EA424A /* YarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364792A88066E003403B8 /* YarnView.swift */; };
+		C7AD337B2A89694F00EA424A /* PatternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F610B2A847A1A00A30380 /* PatternModel.swift */; };
+		C7AD337C2A89694F00EA424A /* YarnCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2182A86EDDB00C06EA4 /* YarnCard.swift */; };
+		C7AD337D2A89694F00EA424A /* ProjectCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */; };
+		C7AD337E2A89694F00EA424A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60E72A8442FD00A30380 /* ContentView.swift */; };
+		C7AD337F2A89694F00EA424A /* TermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753647B2A88067B003403B8 /* TermView.swift */; };
+		C7AD33802A89694F00EA424A /* NewYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61132A8586FB00A30380 /* NewYarnView.swift */; };
+		C7AD33812A89694F00EA424A /* ImageUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */; };
+		C7AD33822A89694F00EA424A /* NewPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FB2A84533C00A30380 /* NewPatternView.swift */; };
+		C7AD33832A89694F00EA424A /* PatternList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB21D2A8718FC00C06EA4 /* PatternList.swift */; };
+		C7AD33842A89694F00EA424A /* GlossaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61032A8453A200A30380 /* GlossaryView.swift */; };
+		C7AD33852A89694F00EA424A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FF2A84535C00A30380 /* SettingsView.swift */; };
+		C7AD33862A89694F00EA424A /* ProjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB21F2A871F9D00C06EA4 /* ProjectList.swift */; };
+		C7AD33872A89694F00EA424A /* NewProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61192A85877D00A30380 /* NewProjectView.swift */; };
+		C7AD33882A89694F00EA424A /* CrochetCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60E52A8442FD00A30380 /* CrochetCompanionApp.swift */; };
+		C7AD33892A89694F00EA424A /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648F2A888D79003403B8 /* EditProjectView.swift */; };
+		C7AD338A2A89694F00EA424A /* YarnCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F60FD2A84535100A30380 /* YarnCollectionView.swift */; };
+		C7AD338B2A89694F00EA424A /* TermCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB21A2A86EDE600C06EA4 /* TermCard.swift */; };
+		C7AD338C2A89694F00EA424A /* TermList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2232A871FAD00C06EA4 /* TermList.swift */; };
+		C7AD338D2A89694F00EA424A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61092A84570500A30380 /* TabBar.swift */; };
+		C7AD338E2A89694F00EA424A /* EditPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364892A888D5A003403B8 /* EditPatternView.swift */; };
+		C7AD338F2A89694F00EA424A /* NewTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61172A85877100A30380 /* NewTermView.swift */; };
+		C7AD33902A89694F00EA424A /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364772A880665003403B8 /* ProjectView.swift */; };
+		C7AD33912A89694F00EA424A /* PatternCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */; };
+		C7AD33922A89694F00EA424A /* YarnList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB2212A871FA500C06EA4 /* YarnList.swift */; };
+		C7AD33942A89694F00EA424A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7AD336E2A89694F00EA424A /* RealmSwift */; };
+		C7AD33952A89694F00EA424A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C7AD336C2A89694F00EA424A /* Realm */; };
+		C7AD33962A89694F00EA424A /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = C7AD336F2A89694F00EA424A /* YouTubePlayerKit */; };
+		C7AD33982A89694F00EA424A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60EC2A8442FE00A30380 /* Preview Assets.xcassets */; };
+		C7AD33992A89694F00EA424A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60E92A8442FE00A30380 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C73F60E22A8442FD00A30380 /* CrochetHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrochetHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73F60E52A8442FD00A30380 /* CrochetHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrochetHelperApp.swift; sourceTree = "<group>"; };
+		C73F60E52A8442FD00A30380 /* CrochetCompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrochetCompanionApp.swift; sourceTree = "<group>"; };
 		C73F60E72A8442FD00A30380 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C73F60E92A8442FE00A30380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C73F60EC2A8442FE00A30380 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -75,6 +74,8 @@
 		C753648B2A888D64003403B8 /* EditYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditYarnView.swift; sourceTree = "<group>"; };
 		C753648D2A888D6E003403B8 /* EditTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTermView.swift; sourceTree = "<group>"; };
 		C753648F2A888D79003403B8 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		C75364912A8961CC003403B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C7AD339D2A89694F00EA424A /* CrochetCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrochetCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadView.swift; sourceTree = "<group>"; };
 		C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCard.swift; sourceTree = "<group>"; };
 		C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
@@ -87,13 +88,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C73F60DF2A8442FD00A30380 /* Frameworks */ = {
+		C7AD33932A89694F00EA424A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7FDB2122A86BE6A00C06EA4 /* RealmSwift in Frameworks */,
-				C7FDB2102A86BE6A00C06EA4 /* Realm in Frameworks */,
-				C75364732A8800C9003403B8 /* YouTubePlayerKit in Frameworks */,
+				C7AD33942A89694F00EA424A /* RealmSwift in Frameworks */,
+				C7AD33952A89694F00EA424A /* Realm in Frameworks */,
+				C7AD33962A89694F00EA424A /* YouTubePlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +104,7 @@
 		C73F60D92A8442FD00A30380 = {
 			isa = PBXGroup;
 			children = (
-				C73F60E42A8442FD00A30380 /* CrochetHelper */,
+				C73F60E42A8442FD00A30380 /* CrochetCompanion */,
 				C73F60E32A8442FD00A30380 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,22 +112,22 @@
 		C73F60E32A8442FD00A30380 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C73F60E22A8442FD00A30380 /* CrochetHelper.app */,
+				C7AD339D2A89694F00EA424A /* CrochetCompanion.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C73F60E42A8442FD00A30380 /* CrochetHelper */ = {
+		C73F60E42A8442FD00A30380 /* CrochetCompanion */ = {
 			isa = PBXGroup;
 			children = (
-				C73F60E52A8442FD00A30380 /* CrochetHelperApp.swift */,
+				C75364912A8961CC003403B8 /* Info.plist */,
+				C73F60E52A8442FD00A30380 /* CrochetCompanionApp.swift */,
 				C73F60F32A8443E300A30380 /* Views */,
 				C73F60F52A84440A00A30380 /* Models */,
-				C73F60F42A8443FE00A30380 /* ViewModels */,
 				C73F60E92A8442FE00A30380 /* Assets.xcassets */,
 				C73F60EB2A8442FE00A30380 /* Preview Content */,
 			);
-			path = CrochetHelper;
+			path = CrochetCompanion;
 			sourceTree = "<group>";
 		};
 		C73F60EB2A8442FE00A30380 /* Preview Content */ = {
@@ -147,13 +148,6 @@
 				C73F60F62A84442600A30380 /* Main */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		C73F60F42A8443FE00A30380 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C73F60F52A84440A00A30380 /* Models */ = {
@@ -241,26 +235,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C73F60E12A8442FD00A30380 /* CrochetHelper */ = {
+		C7AD336B2A89694F00EA424A /* CrochetCompanion */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C73F60F02A8442FE00A30380 /* Build configuration list for PBXNativeTarget "CrochetHelper" */;
+			buildConfigurationList = C7AD339A2A89694F00EA424A /* Build configuration list for PBXNativeTarget "CrochetCompanion" */;
 			buildPhases = (
-				C73F60DE2A8442FD00A30380 /* Sources */,
-				C73F60DF2A8442FD00A30380 /* Frameworks */,
-				C73F60E02A8442FD00A30380 /* Resources */,
+				C7AD33712A89694F00EA424A /* Sources */,
+				C7AD33932A89694F00EA424A /* Frameworks */,
+				C7AD33972A89694F00EA424A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CrochetHelper;
+			name = CrochetCompanion;
 			packageProductDependencies = (
-				C7FDB20F2A86BE6A00C06EA4 /* Realm */,
-				C7FDB2112A86BE6A00C06EA4 /* RealmSwift */,
-				C75364722A8800C9003403B8 /* YouTubePlayerKit */,
+				C7AD336C2A89694F00EA424A /* Realm */,
+				C7AD336E2A89694F00EA424A /* RealmSwift */,
+				C7AD336F2A89694F00EA424A /* YouTubePlayerKit */,
 			);
 			productName = "Crochet Helper";
-			productReference = C73F60E22A8442FD00A30380 /* CrochetHelper.app */;
+			productReference = C7AD339D2A89694F00EA424A /* CrochetCompanion.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -272,13 +266,8 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-					C73F60E12A8442FD00A30380 = {
-						CreatedOnToolsVersion = 14.3.1;
-					};
-				};
 			};
-			buildConfigurationList = C73F60DD2A8442FD00A30380 /* Build configuration list for PBXProject "CrochetHelper" */;
+			buildConfigurationList = C73F60DD2A8442FD00A30380 /* Build configuration list for PBXProject "CrochetCompanion" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -295,61 +284,61 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C73F60E12A8442FD00A30380 /* CrochetHelper */,
+				C7AD336B2A89694F00EA424A /* CrochetCompanion */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C73F60E02A8442FD00A30380 /* Resources */ = {
+		C7AD33972A89694F00EA424A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73F60ED2A8442FE00A30380 /* Preview Assets.xcassets in Resources */,
-				C73F60EA2A8442FE00A30380 /* Assets.xcassets in Resources */,
+				C7AD33982A89694F00EA424A /* Preview Assets.xcassets in Resources */,
+				C7AD33992A89694F00EA424A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C73F60DE2A8442FD00A30380 /* Sources */ = {
+		C7AD33712A89694F00EA424A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73F61122A856E3D00A30380 /* ProjectModel.swift in Sources */,
-				C753648C2A888D64003403B8 /* EditYarnView.swift in Sources */,
-				C73F61022A84536C00A30380 /* AllProjectsView.swift in Sources */,
-				C73F610E2A856E2700A30380 /* YarnModel.swift in Sources */,
-				C75364762A880659003403B8 /* PatternView.swift in Sources */,
-				C73F60FA2A84532300A30380 /* AllPatternsView.swift in Sources */,
-				C753648E2A888D6E003403B8 /* EditTermView.swift in Sources */,
-				C73F61102A856E3400A30380 /* GlossaryTermModel.swift in Sources */,
-				C753647A2A88066E003403B8 /* YarnView.swift in Sources */,
-				C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */,
-				C7FDB2192A86EDDB00C06EA4 /* YarnCard.swift in Sources */,
-				C7FDB2172A86EDD300C06EA4 /* ProjectCard.swift in Sources */,
-				C73F60E82A8442FD00A30380 /* ContentView.swift in Sources */,
-				C753647C2A88067B003403B8 /* TermView.swift in Sources */,
-				C73F61142A8586FB00A30380 /* NewYarnView.swift in Sources */,
-				C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */,
-				C73F60FC2A84533C00A30380 /* NewPatternView.swift in Sources */,
-				C7FDB21E2A8718FC00C06EA4 /* PatternList.swift in Sources */,
-				C73F61042A8453A200A30380 /* GlossaryView.swift in Sources */,
-				C73F61002A84535C00A30380 /* SettingsView.swift in Sources */,
-				C7FDB2202A871F9D00C06EA4 /* ProjectList.swift in Sources */,
-				C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */,
-				C73F60E62A8442FD00A30380 /* CrochetHelperApp.swift in Sources */,
-				C75364902A888D79003403B8 /* EditProjectView.swift in Sources */,
-				C73F60FE2A84535100A30380 /* YarnCollectionView.swift in Sources */,
-				C7FDB21B2A86EDE600C06EA4 /* TermCard.swift in Sources */,
-				C7FDB2242A871FAD00C06EA4 /* TermList.swift in Sources */,
-				C73F610A2A84570500A30380 /* TabBar.swift in Sources */,
-				C753648A2A888D5A003403B8 /* EditPatternView.swift in Sources */,
-				C73F61182A85877100A30380 /* NewTermView.swift in Sources */,
-				C75364782A880665003403B8 /* ProjectView.swift in Sources */,
-				C7FDB2152A86ED1400C06EA4 /* PatternCard.swift in Sources */,
-				C7FDB2222A871FA500C06EA4 /* YarnList.swift in Sources */,
+				C7AD33722A89694F00EA424A /* ProjectModel.swift in Sources */,
+				C7AD33732A89694F00EA424A /* EditYarnView.swift in Sources */,
+				C7AD33742A89694F00EA424A /* AllProjectsView.swift in Sources */,
+				C7AD33752A89694F00EA424A /* YarnModel.swift in Sources */,
+				C7AD33762A89694F00EA424A /* PatternView.swift in Sources */,
+				C7AD33772A89694F00EA424A /* AllPatternsView.swift in Sources */,
+				C7AD33782A89694F00EA424A /* EditTermView.swift in Sources */,
+				C7AD33792A89694F00EA424A /* GlossaryTermModel.swift in Sources */,
+				C7AD337A2A89694F00EA424A /* YarnView.swift in Sources */,
+				C7AD337B2A89694F00EA424A /* PatternModel.swift in Sources */,
+				C7AD337C2A89694F00EA424A /* YarnCard.swift in Sources */,
+				C7AD337D2A89694F00EA424A /* ProjectCard.swift in Sources */,
+				C7AD337E2A89694F00EA424A /* ContentView.swift in Sources */,
+				C7AD337F2A89694F00EA424A /* TermView.swift in Sources */,
+				C7AD33802A89694F00EA424A /* NewYarnView.swift in Sources */,
+				C7AD33812A89694F00EA424A /* ImageUploadView.swift in Sources */,
+				C7AD33822A89694F00EA424A /* NewPatternView.swift in Sources */,
+				C7AD33832A89694F00EA424A /* PatternList.swift in Sources */,
+				C7AD33842A89694F00EA424A /* GlossaryView.swift in Sources */,
+				C7AD33852A89694F00EA424A /* SettingsView.swift in Sources */,
+				C7AD33862A89694F00EA424A /* ProjectList.swift in Sources */,
+				C7AD33872A89694F00EA424A /* NewProjectView.swift in Sources */,
+				C7AD33882A89694F00EA424A /* CrochetCompanionApp.swift in Sources */,
+				C7AD33892A89694F00EA424A /* EditProjectView.swift in Sources */,
+				C7AD338A2A89694F00EA424A /* YarnCollectionView.swift in Sources */,
+				C7AD338B2A89694F00EA424A /* TermCard.swift in Sources */,
+				C7AD338C2A89694F00EA424A /* TermList.swift in Sources */,
+				C7AD338D2A89694F00EA424A /* TabBar.swift in Sources */,
+				C7AD338E2A89694F00EA424A /* EditPatternView.swift in Sources */,
+				C7AD338F2A89694F00EA424A /* NewTermView.swift in Sources */,
+				C7AD33902A89694F00EA424A /* ProjectView.swift in Sources */,
+				C7AD33912A89694F00EA424A /* PatternCard.swift in Sources */,
+				C7AD33922A89694F00EA424A /* YarnList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,20 +459,20 @@
 			};
 			name = Release;
 		};
-		C73F60F12A8442FE00A30380 /* Debug */ = {
+		C7AD339B2A89694F00EA424A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CrochetHelper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CrochetCompanion/Preview Content\"";
 				DEVELOPMENT_TEAM = 8HZG4VWY6M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CrochetCompanionInfo.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -492,7 +481,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alinatariq.CrochetHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinatariq.CrochetCompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -500,20 +489,20 @@
 			};
 			name = Debug;
 		};
-		C73F60F22A8442FE00A30380 /* Release */ = {
+		C7AD339C2A89694F00EA424A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CrochetHelper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CrochetCompanion/Preview Content\"";
 				DEVELOPMENT_TEAM = 8HZG4VWY6M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CrochetCompanionInfo.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -522,7 +511,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alinatariq.CrochetHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinatariq.CrochetCompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -533,7 +522,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C73F60DD2A8442FD00A30380 /* Build configuration list for PBXProject "CrochetHelper" */ = {
+		C73F60DD2A8442FD00A30380 /* Build configuration list for PBXProject "CrochetCompanion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C73F60EE2A8442FE00A30380 /* Debug */,
@@ -542,11 +531,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C73F60F02A8442FE00A30380 /* Build configuration list for PBXNativeTarget "CrochetHelper" */ = {
+		C7AD339A2A89694F00EA424A /* Build configuration list for PBXNativeTarget "CrochetCompanion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C73F60F12A8442FE00A30380 /* Debug */,
-				C73F60F22A8442FE00A30380 /* Release */,
+				C7AD339B2A89694F00EA424A /* Debug */,
+				C7AD339C2A89694F00EA424A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -555,6 +544,22 @@
 
 /* Begin XCRemoteSwiftPackageReference section */
 		C75364712A8800C9003403B8 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.2;
+			};
+		};
+		C7AD336D2A89694F00EA424A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		C7AD33702A89694F00EA424A /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
 			requirement = {
@@ -573,20 +578,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C75364722A8800C9003403B8 /* YouTubePlayerKit */ = {
+		C7AD336C2A89694F00EA424A /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C75364712A8800C9003403B8 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
-			productName = YouTubePlayerKit;
-		};
-		C7FDB20F2A86BE6A00C06EA4 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C7FDB20E2A86BE6A00C06EA4 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = C7AD336D2A89694F00EA424A /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		C7FDB2112A86BE6A00C06EA4 /* RealmSwift */ = {
+		C7AD336E2A89694F00EA424A /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C7FDB20E2A86BE6A00C06EA4 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = C7AD336D2A89694F00EA424A /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		C7AD336F2A89694F00EA424A /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7AD33702A89694F00EA424A /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
