@@ -11,42 +11,75 @@ import RealmSwift
 struct EditProjectView: View {
     @ObservedRealmObject var project: Project
     
+    @State private var name: String = ""
+    @State private var imageUrl: String = ""
+    @State private var yarn: String = ""
+    @State private var stitches: String = ""
+    @State private var patternUrl: String = ""
+    @State private var finished: Bool = false
+    @State private var instructions: String = ""
+    @State private var notes: String = ""
+    
     @Environment(\.dismiss) var dismissProjectSheet
     
     var body: some View {
         NavigationStack {
             Form {
                 Section(header: Text("Project Name *")) {
-                    TextField("", text: $project.name)
+                    TextField("", text: $name)
+                        .onAppear {
+                            name = project.name
+                        }
                 }
                 
                 Section(header: Text("Image")) {
-                    TextField("", text: $project.imageUrl)
+                    TextField("", text: $imageUrl)
+                        .onAppear{
+                            imageUrl = project.imageUrl
+                        }
                 }
                 
                 Section(header: Text("Yarn")) {
-                    TextField("", text: $project.stitches)
+                    TextField("", text: $yarn)
+                        .onAppear{
+                            yarn = project.yarn
+                        }
                 }
                 
-                Section(header: Text("Stiches")) {
-                    TextField("", text: $project.stitches)
+                Section(header: Text("Stitches")) {
+                    TextField("", text: $stitches)
+                        .onAppear{
+                            stitches = project.stitches
+                        }
                 }
                 
                 Section(header: Text("Pattern Link")) {
-                    TextField("", text: $project.patternUrl)
+                    TextField("", text: $patternUrl)
+                        .onAppear{
+                            patternUrl = project.patternUrl
+                        }
                 }
                 
                 Section() {
-                    Toggle("Finished?", isOn: $project.finished)
+                    Toggle("Finished?", isOn: $finished)
+                        .onAppear{
+                            finished = project.finished
+                        }
                 }
                 
                 Section(header: Text("Pattern *")) {
-                    TextEditor(text: $project.instructions)
+                    TextEditor(text: $instructions)
+                        .onAppear{
+                            instructions = project.instructions
+                        }
                         .frame(minHeight: 50, maxHeight: 100)
                 }
                 Section(header: Text("Additional Notes")) {
-                    TextEditor(text: $project.notes)
+                    TextEditor(text: $notes)
                         .frame(minHeight: 50, maxHeight: 100)
+                        .onAppear{
+                            notes = project.notes
+                        }
                     
                 }
             }
@@ -61,17 +94,22 @@ struct EditProjectView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-//                        let newProject = Project()
-//                        newProject.name = name
-//                        newProject.imageUrl = imageUrl
-//                        newProject.yarn = yarn
-//                        newProject.stitches = stitches
-//                        newProject.patternUrl = patternUrl
-//                        newProject.instructions = instructions
-//                        newProject.notes = notes
-//
-//                        $projects.append(newProject)
-//
+                        let thawedProject = project.thaw()
+                        if thawedProject!.isInvalidated == false {
+                            // get the object's realm
+                            let thawedRealm = thawedProject!.realm!
+                            
+                            try! thawedRealm.write {
+                                thawedProject!.name = name
+                                thawedProject!.imageUrl = imageUrl
+                                thawedProject!.yarn = yarn
+                                thawedProject!.stitches = stitches
+                                thawedProject!.patternUrl = patternUrl
+                                thawedProject!.finished = finished
+                                thawedProject!.instructions = instructions
+                                thawedProject!.notes = notes
+                            }
+                        }
                         dismissProjectSheet()
                     } label: {
                         Label("", systemImage: "checkmark")

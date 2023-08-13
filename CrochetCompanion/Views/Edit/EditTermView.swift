@@ -11,28 +11,45 @@ import RealmSwift
 struct EditTermView: View {
     @ObservedRealmObject var term: GlossaryTerm
     
+    @State private var name: String = ""
+    @State private var instructions: String = ""
+    @State private var imageUrl: String = ""
+    @State private var videoUrl: String = ""
+    
     @Environment(\.dismiss) var dismissTermSheet
     
     var body: some View {
         NavigationStack {
             Form {
                 Section(header: Text("Name *")) {
-                    TextField("", text: $term.name)
+                    TextField("", text: $name)
+                        .onAppear {
+                            name = term.name
+                        }
                 }
                 
                 Section(header: Text("Instructions *")) {
-                    TextEditor(text: $term.instructions)
+                    TextEditor(text: $instructions)
                         .frame(minHeight: 60, maxHeight: 100)
+                        .onAppear {
+                            instructions = term.instructions
+                        }
                 }
                 
                 // TODO: save images locally
                 Section(header: Text("Image")) {
-                    TextField("", text: $term.imageUrl)
+                    TextField("", text: $imageUrl)
+                        .onAppear {
+                            imageUrl = term.imageUrl
+                        }
                 }
                 
                 // TODO: embed video?
                 Section(header: Text("Video")) {
-                    TextField("", text: $term.videoUrl)
+                    TextField("", text: $videoUrl)
+                        .onAppear {
+                            videoUrl = term.videoUrl
+                        }
                 }
             }
             .toolbar(content: {
@@ -46,14 +63,18 @@ struct EditTermView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-//                        let newTerm = GlossaryTerm()
-//                        newTerm.name = name
-//                        newTerm.instructions = instructions
-//                        newTerm.imageUrl = imageUrl
-//                        newTerm.videoUrl = videoUrl
-//
-//                        $terms.append(newTerm)
-//
+                        let thawedTerm = term.thaw()
+                        if thawedTerm!.isInvalidated == false {
+                            // get the object's realm
+                            let thawedRealm = thawedTerm!.realm!
+                            
+                            try! thawedRealm.write {
+                                thawedTerm!.name = name
+                                thawedTerm!.instructions = instructions
+                                thawedTerm!.imageUrl = imageUrl
+                                thawedTerm!.videoUrl = videoUrl
+                            }
+                        }
                         dismissTermSheet()
                     } label: {
                         Label("", systemImage: "checkmark")

@@ -11,57 +11,90 @@ import RealmSwift
 struct EditPatternView: View {
     @ObservedRealmObject var pattern: Pattern
     
+    @State private var name: String = ""
+    @State private var imageUrl: String = ""
+    @State private var hook: HookSizes = HookSizes.unknown
+    @State private var yarnWeight: YarnTypes = YarnTypes.unknown
+    @State private var stitches: String = ""
+    @State private var patternUrl: String = ""
+    @State private var instructions: String = ""
+    @State private var notes: String = ""
+    
     @Environment(\.dismiss) var dismissPatternSheet
     
     var body: some View {
         NavigationStack {
             Form {
                 Section(header: Text("Pattern Name *")) {
-                    TextField("\(pattern.name)", text: $pattern.name)
+                    TextField("", text: $name)
+                        .onAppear {
+                            name = pattern.name
+                        }
                 }
                 
                 Section(header: Text("Image URL")) {
-                    TextField("\(pattern.imageUrl)", text: $pattern.imageUrl)
+                    TextField("", text: $imageUrl)
+                        .onAppear {
+                            imageUrl = pattern.imageUrl
+                        }
                 }
                 
                 Section(header: Text("Hook Size")) {
-                    Picker("Choose a hook size", selection: $pattern.hook) {
+                    Picker("Choose a hook size", selection: $hook) {
                         ForEach(HookSizes.allCases) { hook in
                             Text(hook.id)
                                 .tag(hook)
-                                
+                            
                         }
+                    }
+                    .onAppear {
+                        hook = HookSizes(rawValue: pattern.hook)!
                     }
                     .labelsHidden()
                 }
                 
                 Section(header: Text("Yarn Weight")) {
-                    Picker("Choose a yarn weight", selection: $pattern.yarnWeight) {
+                    Picker("Choose a yarn weight", selection: $yarnWeight) {
                         ForEach(YarnTypes.allCases) { yarnWeight in
                             Text(yarnWeight.id)
-                                .tag(YarnTypes.light)
-                                
+                                .tag(yarnWeight)
+                            
                         }
+                    }
+                    .onAppear {
+                        yarnWeight = YarnTypes(rawValue: pattern.yarnWeight)!
                     }
                     .labelsHidden()
                 }
                 
                 Section(header: Text("Stitches")) {
-                    TextField("\(pattern.stitches)", text: $pattern.stitches)
+                    TextField("", text: $stitches)
+                        .onAppear {
+                            stitches = pattern.stitches
+                        }
                 }
                 
                 Section(header: Text("Pattern Link")) {
-                    TextField("\(pattern.patternUrl)", text: $pattern.patternUrl)
+                    TextField("", text: $patternUrl)
+                        .onAppear {
+                            patternUrl = pattern.patternUrl
+                        }
                 }
                 
                 Section(header: Text("Pattern *")) {
-                    TextEditor(text: $pattern.instructions)
+                    TextEditor(text: $instructions)
                         .frame(minHeight: 60, maxHeight: 100)
+                        .onAppear {
+                            instructions = pattern.instructions
+                        }
                 }
                 Section(header: Text("Additional Notes")) {
-                    TextEditor(text: $pattern.notes)
+                    TextEditor(text: $notes)
                         .frame(minHeight: 60, maxHeight: 100)
-                        
+                        .onAppear {
+                            notes = pattern.notes
+                        }
+                    
                 }
             }
             .toolbar(content: {
@@ -75,24 +108,22 @@ struct EditPatternView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-//                        let newPattern = Pattern()
-//                        newPattern.name = name
-//                        newPattern.imageUrl = imageUrl
-//                        newPattern.instructions = instructions
-//                        newPattern.stitches = stitches
-//                        newPattern.patternUrl = patternUrl
-//                        newPattern.notes = notes
-//
-//                        if (hook != HookSizes.unknown) {
-//                            newPattern.hook = hook.id
-//                        }
-//
-//                        if (yarnWeight != YarnTypes.unknown) {
-//                            newPattern.yarnWeight = yarnWeight.id
-//                        }
-//
-//                        $patterns.append(newPattern)
-//
+                        let thawedPattern = pattern.thaw()
+                        if thawedPattern!.isInvalidated == false {
+                            // get the object's realm
+                            let thawedRealm = thawedPattern!.realm!
+                            
+                            try! thawedRealm.write {
+                                thawedPattern!.name = name
+                                thawedPattern!.imageUrl = imageUrl
+                                thawedPattern!.instructions = instructions
+                                thawedPattern!.stitches = stitches
+                                thawedPattern!.patternUrl = patternUrl
+                                thawedPattern!.notes = notes
+                                thawedPattern!.hook = hook.id
+                                thawedPattern!.yarnWeight = yarnWeight.id
+                            }
+                        }
                         dismissPatternSheet()
                     } label: {
                         Label("", systemImage: "checkmark")
