@@ -6,17 +6,22 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Project: Identifiable {
-    let id = UUID()
-    let name: String
-    let image: String
-    let hook: HookSizes.RawValue
-    let yarn: String
-    let stitches: String
-    let url: String
-    let pattern: String
-    let notes: String
+// TODO: add progress tracker
+class Project: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var name: String
+    // TODO: see PatternModel
+    @Persisted var imageUrl: String
+    // TODO: support populating from yarn collection
+    @Persisted var yarn: String
+    // TODO: see PatternModel
+    @Persisted var stitches: String
+    @Persisted var patternUrl: String
+    @Persisted var instructions: String
+    @Persisted var notes: String
+    @Persisted var finished: Bool = false
 }
 
 

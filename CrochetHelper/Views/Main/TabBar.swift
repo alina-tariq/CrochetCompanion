@@ -8,26 +8,23 @@
 import SwiftUI
 
 struct TabBar: View {
+    @State private var showDialog = false
+    
     var body: some View {
         TabView {
-            PatternsView()
+            AllPatternsView()
                 .tabItem{
                     Image("Patterns")
                     Text("Patterns")
                 }
             
-            ProjectsView()
+            AllProjectsView()
                 .tabItem {
                     Image("Projects")
                     Text("Projects")
                 }
             
-//            NewPatternView()
-//                .tabItem {
-//                    Label("New", systemImage: "plus.circle.fill")
-//                }
-            
-            YarnView()
+            YarnCollectionView()
                 .tabItem {
                     Image("Yarn")
                     Text("Yarn")
@@ -38,6 +35,12 @@ struct TabBar: View {
                     Image("Glossary")
                     Text("Glossary")
                 }
+            
+//            SettingsView()
+//                .tabItem {
+//                    Image("Settings")
+//                    Text("Settings")
+//                }
         }
     }
 }

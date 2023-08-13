@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct GlossaryTerm: Identifiable {
-    let id = UUID()
-    let name: String
-    let instructions: String
-    let imageUrl: String
-    let videoURL: String
+class GlossaryTerm: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var name: String
+    @Persisted var instructions: String
+    // TODO: use local images
+    @Persisted var imageUrl: String
+    // TODO: embed video in app for viewing?
+    @Persisted var videoUrl: String
 }

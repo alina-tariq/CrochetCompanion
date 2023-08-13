@@ -1,5 +1,5 @@
 //
-//  GlossaryView.swift
+//  YarnView.swift
 //  Crochet Helper
 //
 //  Created by Alina Tariq on 2023-08-09.
@@ -7,16 +7,18 @@
 
 import SwiftUI
 
-struct GlossaryView: View {
-    @State private var addTerm = false
+struct YarnCollectionView: View {
+    @State private var addYarn = false
     
     var body: some View {
         NavigationStack {
-            TermList()
+            ScrollView {
+                YarnList()
+            }
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        addTerm = true
+                        addYarn = true
                     } label: {
                         Image(systemName: "plus")
                                 
@@ -24,16 +26,16 @@ struct GlossaryView: View {
                     .padding()
                 }
             })
-            .navigationTitle("Glossary Terms")
-            .sheet(isPresented: $addTerm) {
-                NewTermView()
+            .navigationTitle("Yarn Collection")
+            .sheet(isPresented: $addYarn) {
+                NewYarnView()
             }
         }
     }
 }
 
-struct GlossaryView_Previews: PreviewProvider {
+struct YarnCollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        GlossaryView()
+        YarnCollectionView()
     }
 }
