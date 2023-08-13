@@ -47,14 +47,14 @@ struct PatternView: View {
                 VStack{
                     Text("Hook Size: ")
                         .font(.headline) +
-                    Text(" \(pattern.hook == "" ? "Unknown" : pattern.hook)")
+                    Text(" \(pattern.hook == HookSizes.unknown.id ? "Unknown" : pattern.hook)")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
                 VStack{
                     Text("Yarn Weight: ")
                         .font(.headline) +
-                    Text(" \(pattern.yarnWeight == "" ? "Unknown" : pattern.yarnWeight)")
+                    Text(" \(pattern.yarnWeight == YarnTypes.unknown.id ? "Unknown" : pattern.yarnWeight)")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 

@@ -91,14 +91,8 @@ struct NewPatternView: View {
                         newPattern.stitches = stitches
                         newPattern.patternUrl = patternUrl
                         newPattern.notes = notes
-                        
-                        if (hook != HookSizes.unknown) {
-                            newPattern.hook = hook.id
-                        }
-                        
-                        if (yarnWeight != YarnTypes.unknown) {
-                            newPattern.yarnWeight = yarnWeight.id
-                        }
+                        newPattern.hook = hook.id
+                        newPattern.yarnWeight = yarnWeight.id
                         
                         $patterns.append(newPattern)
                         
