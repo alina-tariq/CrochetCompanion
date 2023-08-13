@@ -30,6 +30,10 @@
 		C75364782A880665003403B8 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364772A880665003403B8 /* ProjectView.swift */; };
 		C753647A2A88066E003403B8 /* YarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364792A88066E003403B8 /* YarnView.swift */; };
 		C753647C2A88067B003403B8 /* TermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753647B2A88067B003403B8 /* TermView.swift */; };
+		C753648A2A888D5A003403B8 /* EditPatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75364892A888D5A003403B8 /* EditPatternView.swift */; };
+		C753648C2A888D64003403B8 /* EditYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648B2A888D64003403B8 /* EditYarnView.swift */; };
+		C753648E2A888D6E003403B8 /* EditTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648D2A888D6E003403B8 /* EditTermView.swift */; };
+		C75364902A888D79003403B8 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648F2A888D79003403B8 /* EditProjectView.swift */; };
 		C7FDB20B2A85981000C06EA4 /* ImageUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */; };
 		C7FDB2102A86BE6A00C06EA4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB20F2A86BE6A00C06EA4 /* Realm */; };
 		C7FDB2122A86BE6A00C06EA4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7FDB2112A86BE6A00C06EA4 /* RealmSwift */; };
@@ -67,6 +71,10 @@
 		C75364772A880665003403B8 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		C75364792A88066E003403B8 /* YarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnView.swift; sourceTree = "<group>"; };
 		C753647B2A88067B003403B8 /* TermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermView.swift; sourceTree = "<group>"; };
+		C75364892A888D5A003403B8 /* EditPatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPatternView.swift; sourceTree = "<group>"; };
+		C753648B2A888D64003403B8 /* EditYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditYarnView.swift; sourceTree = "<group>"; };
+		C753648D2A888D6E003403B8 /* EditTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTermView.swift; sourceTree = "<group>"; };
+		C753648F2A888D79003403B8 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadView.swift; sourceTree = "<group>"; };
 		C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCard.swift; sourceTree = "<group>"; };
 		C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
@@ -132,6 +140,7 @@
 		C73F60F32A8443E300A30380 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C75364882A888D4D003403B8 /* Edit */,
 				C75364742A880635003403B8 /* Detail */,
 				C7FDB21C2A8718EF00C06EA4 /* List */,
 				C73F61152A85871F00A30380 /* New */,
@@ -193,6 +202,17 @@
 				C753647B2A88067B003403B8 /* TermView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		C75364882A888D4D003403B8 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				C75364892A888D5A003403B8 /* EditPatternView.swift */,
+				C753648B2A888D64003403B8 /* EditYarnView.swift */,
+				C753648D2A888D6E003403B8 /* EditTermView.swift */,
+				C753648F2A888D79003403B8 /* EditProjectView.swift */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 		C7FDB2132A86E9AE00C06EA4 /* Cards */ = {
@@ -298,10 +318,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C73F61122A856E3D00A30380 /* ProjectModel.swift in Sources */,
+				C753648C2A888D64003403B8 /* EditYarnView.swift in Sources */,
 				C73F61022A84536C00A30380 /* AllProjectsView.swift in Sources */,
 				C73F610E2A856E2700A30380 /* YarnModel.swift in Sources */,
 				C75364762A880659003403B8 /* PatternView.swift in Sources */,
 				C73F60FA2A84532300A30380 /* AllPatternsView.swift in Sources */,
+				C753648E2A888D6E003403B8 /* EditTermView.swift in Sources */,
 				C73F61102A856E3400A30380 /* GlossaryTermModel.swift in Sources */,
 				C753647A2A88066E003403B8 /* YarnView.swift in Sources */,
 				C73F610C2A847A1A00A30380 /* PatternModel.swift in Sources */,
@@ -318,10 +340,12 @@
 				C7FDB2202A871F9D00C06EA4 /* ProjectList.swift in Sources */,
 				C73F611A2A85877D00A30380 /* NewProjectView.swift in Sources */,
 				C73F60E62A8442FD00A30380 /* CrochetHelperApp.swift in Sources */,
+				C75364902A888D79003403B8 /* EditProjectView.swift in Sources */,
 				C73F60FE2A84535100A30380 /* YarnCollectionView.swift in Sources */,
 				C7FDB21B2A86EDE600C06EA4 /* TermCard.swift in Sources */,
 				C7FDB2242A871FAD00C06EA4 /* TermList.swift in Sources */,
 				C73F610A2A84570500A30380 /* TabBar.swift in Sources */,
+				C753648A2A888D5A003403B8 /* EditPatternView.swift in Sources */,
 				C73F61182A85877100A30380 /* NewTermView.swift in Sources */,
 				C75364782A880665003403B8 /* ProjectView.swift in Sources */,
 				C7FDB2152A86ED1400C06EA4 /* PatternCard.swift in Sources */,
