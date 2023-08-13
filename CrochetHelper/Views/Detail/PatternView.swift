@@ -13,6 +13,8 @@ struct PatternView: View {
     @State private var editPattern = false
     @State private var goBack = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView {
             Text(pattern.name)
@@ -90,28 +92,21 @@ struct PatternView: View {
             }
             .padding(.horizontal)
             
-            NavigationStack {
-                VStack {
-                    Button {
-                        let thawedPattern = pattern.thaw()
-                        if thawedPattern!.isInvalidated == false { //ensure it's a valid item
-                            
-                            let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
-                            
-                            try! thawedRealm.write {
-                                thawedRealm.delete(thawedPattern!)
-                            }
-                        }
-                        self.goBack = true
-                    } label: {
-                        Text("Delete Pattern")
+            Button(action: {
+                let thawedPattern = pattern.thaw()
+                if thawedPattern!.isInvalidated == false { //ensure it's a valid item
+                    
+                    let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
+                    
+                    try! thawedRealm.write {
+                        thawedRealm.delete(thawedPattern!)
                     }
-                    .buttonStyle(.borderedProminent)
                 }
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Delete Pattern")
             }
-            .navigationDestination(isPresented: $goBack) {
-                AllPatternsView()
-            }
+            .buttonStyle(.borderedProminent)
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -127,7 +122,7 @@ struct PatternView: View {
             EditPatternView(pattern: pattern)
         }
         .navigationBarTitleDisplayMode(.inline)
-}
+    }
 }
 
 struct PatternView_Previews: PreviewProvider {

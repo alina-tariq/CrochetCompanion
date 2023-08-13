@@ -12,6 +12,8 @@ struct YarnView: View {
     @State private var editYarn = false
     @State private var goBack = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView {
             Text(yarn.name + " - " + yarn.colour)
@@ -87,28 +89,21 @@ struct YarnView: View {
             }
             .padding(.horizontal)
             
-            NavigationStack {
-                VStack {
-                    Button {
-                        let thawedPattern = yarn.thaw()
-                        if thawedPattern!.isInvalidated == false { //ensure it's a valid item
-                            
-                            let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
-                            
-                            try! thawedRealm.write {
-                                thawedRealm.delete(thawedPattern!)
-                            }
-                        }
-                        self.goBack = true
-                    } label: {
-                        Text("Delete Yarn")
+            Button(action: {
+                let thawedPattern = yarn.thaw()
+                if thawedPattern!.isInvalidated == false { //ensure it's a valid item
+                    
+                    let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
+                    
+                    try! thawedRealm.write {
+                        thawedRealm.delete(thawedPattern!)
                     }
-                    .buttonStyle(.borderedProminent)
                 }
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Delete Yarn")
             }
-            .navigationDestination(isPresented: $goBack) {
-                YarnCollectionView()
-            }
+            .buttonStyle(.borderedProminent)
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {

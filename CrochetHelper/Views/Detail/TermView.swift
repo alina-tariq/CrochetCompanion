@@ -13,6 +13,8 @@ struct TermView: View {
     @State private var editTerm = false
     @State private var goBack = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView {
             Text(term.name)
@@ -68,28 +70,21 @@ struct TermView: View {
             }
             .padding(.horizontal)
             
-            NavigationStack {
-                VStack {
-                    Button {
-                        let thawedPattern = term.thaw()
-                        if thawedPattern!.isInvalidated == false { //ensure it's a valid item
-                            
-                            let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
-                            
-                            try! thawedRealm.write {
-                                thawedRealm.delete(thawedPattern!)
-                            }
-                        }
-                        self.goBack = true
-                    } label: {
-                        Text("Delete Term")
+            Button(action: {
+                let thawedPattern = term.thaw()
+                if thawedPattern!.isInvalidated == false { //ensure it's a valid item
+                    
+                    let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
+                    
+                    try! thawedRealm.write {
+                        thawedRealm.delete(thawedPattern!)
                     }
-                    .buttonStyle(.borderedProminent)
                 }
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Delete Term")
             }
-            .navigationDestination(isPresented: $goBack) {
-                GlossaryView()
-            }
+            .buttonStyle(.borderedProminent)
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {

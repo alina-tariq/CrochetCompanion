@@ -12,6 +12,8 @@ struct ProjectView: View {
     @State private var editProject = false
     @State private var goBack = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView {
             Text(project.name)
@@ -91,28 +93,21 @@ struct ProjectView: View {
             }
             .padding(.horizontal)
             
-            NavigationStack {
-                VStack {
-                    Button {
-                        let thawedPattern = project.thaw()
-                        if thawedPattern!.isInvalidated == false { //ensure it's a valid item
-                            
-                            let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
-                            
-                            try! thawedRealm.write {
-                                thawedRealm.delete(thawedPattern!)
-                            }
-                        }
-                        self.goBack = true
-                    } label: {
-                        Text("Delete Project")
+            Button(action: {
+                let thawedPattern = project.thaw()
+                if thawedPattern!.isInvalidated == false { //ensure it's a valid item
+                    
+                    let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
+                    
+                    try! thawedRealm.write {
+                        thawedRealm.delete(thawedPattern!)
                     }
-                    .buttonStyle(.borderedProminent)
                 }
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Delete Project")
             }
-            .navigationDestination(isPresented: $goBack) {
-                AllProjectsView()
-            }
+            .buttonStyle(.borderedProminent)
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {

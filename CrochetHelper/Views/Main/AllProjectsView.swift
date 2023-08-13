@@ -26,7 +26,6 @@ struct AllProjectsView: View {
                     .padding()
                 }
             })
-            .navigationBarBackButtonHidden()
             .navigationTitle("Projects")
             .sheet(isPresented: $addProject) {
                 NewProjectView()
