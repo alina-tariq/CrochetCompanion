@@ -69,6 +69,7 @@ struct TermView: View {
                 
             }
             .padding(.horizontal)
+            .padding(.bottom)
             
             Button(action: {
                 let thawedPattern = term.thaw()

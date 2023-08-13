@@ -108,7 +108,7 @@ struct ProjectView: View {
                 Text("Delete Project")
             }
             .buttonStyle(.borderedProminent)
-            .padding()
+            .padding(.bottom)
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
