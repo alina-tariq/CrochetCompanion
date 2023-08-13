@@ -36,6 +36,10 @@ struct EditProjectView: View {
                     TextField("", text: $project.patternUrl)
                 }
                 
+                Section() {
+                    Toggle("Finished?", isOn: $project.finished)
+                }
+                
                 Section(header: Text("Pattern *")) {
                     TextEditor(text: $project.instructions)
                         .frame(minHeight: 50)
