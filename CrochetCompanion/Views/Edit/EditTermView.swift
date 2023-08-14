@@ -30,7 +30,7 @@ struct EditTermView: View {
                 
                 Section(header: Text("Instructions *")) {
                     TextEditor(text: $instructions)
-                        .frame(minHeight: 60, maxHeight: 100)
+                        .frame(minHeight: 60, maxHeight: 200)
                         .onAppear {
                             instructions = term.instructions
                         }
