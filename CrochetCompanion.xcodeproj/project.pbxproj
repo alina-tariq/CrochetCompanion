@@ -127,11 +127,11 @@
 				C75364912A8961CC003403B8 /* Info.plist */,
 				C798FCD92A89B50000B26242 /* default.realm */,
 				C73F60E52A8442FD00A30380 /* CrochetCompanionApp.swift */,
+				C798FCDB2A89BA0C00B26242 /* AppDelegate.swift */,
 				C73F60F32A8443E300A30380 /* Views */,
 				C73F60F52A84440A00A30380 /* Models */,
 				C73F60E92A8442FE00A30380 /* Assets.xcassets */,
 				C73F60EB2A8442FE00A30380 /* Preview Content */,
-				C798FCDB2A89BA0C00B26242 /* AppDelegate.swift */,
 			);
 			path = CrochetCompanion;
 			sourceTree = "<group>";

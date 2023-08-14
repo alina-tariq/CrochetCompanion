@@ -33,10 +33,10 @@ struct NewProjectView: View {
                 }
                 
                 Section(header: Text("Yarn")) {
-                    TextField("", text: $stitches)
+                    TextField("", text: $yarn)
                 }
                 
-                Section(header: Text("Stiches")) {
+                Section(header: Text("Stitches")) {
                     TextField("", text: $stitches)
                 }
                 
