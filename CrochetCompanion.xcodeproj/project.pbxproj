@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C798FCDA2A89B50000B26242 /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = C798FCD92A89B50000B26242 /* default.realm */; };
+		C798FCDC2A89BA0C00B26242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798FCDB2A89BA0C00B26242 /* AppDelegate.swift */; };
 		C7AD33722A89694F00EA424A /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61112A856E3D00A30380 /* ProjectModel.swift */; };
 		C7AD33732A89694F00EA424A /* EditYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753648B2A888D64003403B8 /* EditYarnView.swift */; };
 		C7AD33742A89694F00EA424A /* AllProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73F61012A84536C00A30380 /* AllProjectsView.swift */; };
@@ -75,6 +77,8 @@
 		C753648D2A888D6E003403B8 /* EditTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTermView.swift; sourceTree = "<group>"; };
 		C753648F2A888D79003403B8 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		C75364912A8961CC003403B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C798FCD92A89B50000B26242 /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
+		C798FCDB2A89BA0C00B26242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7AD339D2A89694F00EA424A /* CrochetCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrochetCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadView.swift; sourceTree = "<group>"; };
 		C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCard.swift; sourceTree = "<group>"; };
@@ -121,11 +125,13 @@
 			isa = PBXGroup;
 			children = (
 				C75364912A8961CC003403B8 /* Info.plist */,
+				C798FCD92A89B50000B26242 /* default.realm */,
 				C73F60E52A8442FD00A30380 /* CrochetCompanionApp.swift */,
 				C73F60F32A8443E300A30380 /* Views */,
 				C73F60F52A84440A00A30380 /* Models */,
 				C73F60E92A8442FE00A30380 /* Assets.xcassets */,
 				C73F60EB2A8442FE00A30380 /* Preview Content */,
+				C798FCDB2A89BA0C00B26242 /* AppDelegate.swift */,
 			);
 			path = CrochetCompanion;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 			files = (
 				C7AD33982A89694F00EA424A /* Preview Assets.xcassets in Resources */,
 				C7AD33992A89694F00EA424A /* Assets.xcassets in Resources */,
+				C798FCDA2A89B50000B26242 /* default.realm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +345,7 @@
 				C7AD338F2A89694F00EA424A /* NewTermView.swift in Sources */,
 				C7AD33902A89694F00EA424A /* ProjectView.swift in Sources */,
 				C7AD33912A89694F00EA424A /* PatternCard.swift in Sources */,
+				C798FCDC2A89BA0C00B26242 /* AppDelegate.swift in Sources */,
 				C7AD33922A89694F00EA424A /* YarnList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
