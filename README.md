@@ -1,14 +1,16 @@
-# Crochet Companion
+<h1 align="center">Crochet Companion</h1>
 
-![Icon](./CrochetCompanion/CrochetCompanion/Assets.xcassets/AppIcon.appiconset/appIcon.png)
+<p align="center">
+<img src="./CrochetCompanion/Assets.xcassets/LaunchImage.imageset/launchImage.png" />
+</p>
 
 ## Overview
 
 Crochet companion is an iOS app designed to aid you in your crocheting 
-journey. It allows you to add patterns (yours and others) to your library, 
+journey. It allows you to add patterns to your library, 
 keep track of all your projects as well as your yarn collection, and 
 includes an amendable glossary which comes with written and visual 
-explanations of different crocheting terms.  
+instructions for different stitches.  
 
 ## Specifications
 
@@ -22,7 +24,7 @@ explanations of different crocheting terms.
 
 - Ensure you meet all the required specifications
 - Download the project files 
-- Install cocoapods and then run pod install to install dependencies
+- Install CocoaPods and then run pod install to install dependencies
 - Open the project in XCode and build to run in simulator
 
 ## Demo
