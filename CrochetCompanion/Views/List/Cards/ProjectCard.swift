@@ -20,12 +20,14 @@ struct ProjectCard: View {
                         ZStack {
                             Text(project.name)
                                 .font(.callout)
-                                .padding(6)
+                                .fontWeight(.medium)
                                 .foregroundColor(.white)
+                                .padding(6)
                         }
-                        .background(Color.black)
+                        .background(.black)
                         .opacity(0.8)
                         .cornerRadius(10.0)
+                        .frame(maxWidth: 140)
                         .padding(6)
                     }
             } placeholder: {
@@ -36,21 +38,19 @@ struct ProjectCard: View {
                     .foregroundColor(.white.opacity(0.7))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .overlay(alignment: .bottom) {
-                        ZStack {
-                            Text(project.name)
-                                .font(.callout)
-                                .padding(6)
-                                .foregroundColor(.white)
-                        }
-                        .opacity(0.8)
-                        .cornerRadius(10.0)
-                        .padding(6)
+                        Text(project.name)
+                            .font(.callout)
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .shadow(color: .black, radius: 3, x: 0, y: 0)
+                            .frame(minWidth: 140, maxWidth: 155)
+                            .padding()
                     }
             }
         }
         .frame(width: 160, height: 217)
         .background(LinearGradient(gradient: Gradient(colors: [Color(.gray).opacity(0.3), Color(.gray)]), startPoint: .top, endPoint: .bottom))
-        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         .shadow(color: Color.black.opacity(0.3), radius: 15, x: 0, y: 10)
     }
 }
