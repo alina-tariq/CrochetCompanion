@@ -55,7 +55,7 @@ struct NewPatternView: View {
                     .labelsHidden()
                 }
                 
-                Section(header: Text("Stiches")) {
+                Section(header: Text("Stitches")) {
                     TextField("", text: $stitches)
                 }
                 

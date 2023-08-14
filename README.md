@@ -34,6 +34,7 @@ instructions for different stitches.
 ## Upcoming Features
 
 - Stitch/row counter
+- Add local images instead of a URL
 - Add progress tracker to projects
 - Start new project directly from pattern
 - Connect stitches to glossary terms for easier reference
