@@ -22,14 +22,23 @@ struct YarnList: View {
                 Spacer()
             }
             
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
-                ForEach(yarns) { yarn in
-                    NavigationLink(destination: YarnView(yarn: yarn)) {
-                        YarnCard(yarn: yarn)
+            if yarns.count == 0 {
+                VStack {
+                    Text("You don't have any yarns yet")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(.vertical)
+                
+            } else {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
+                    ForEach(yarns) { yarn in
+                        NavigationLink(destination: YarnView(yarn: yarn)) {
+                            YarnCard(yarn: yarn)
+                        }
                     }
                 }
+                .padding(.top)
             }
-            .padding(.top)
         }
         .padding(.horizontal)
     }

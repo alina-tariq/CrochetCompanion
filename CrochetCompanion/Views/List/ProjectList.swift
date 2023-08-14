@@ -22,14 +22,23 @@ struct ProjectList: View {
                 Spacer()
             }
             
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
-                ForEach(projects) { project in
-                    NavigationLink(destination: ProjectView(project: project)) {
-                        ProjectCard(project: project)
+            if projects.count == 0 {
+                VStack {
+                    Text("You don't have any projects yet")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(.vertical)
+                
+            } else {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
+                    ForEach(projects) { project in
+                        NavigationLink(destination: ProjectView(project: project)) {
+                            ProjectCard(project: project)
+                        }
                     }
                 }
+                .padding(.top)
             }
-            .padding(.top)
         }
         .padding(.horizontal)
     }

@@ -22,14 +22,24 @@ struct PatternList: View {
                 Spacer()
             }
             
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
-                ForEach(patterns) { pattern in
-                    NavigationLink(destination: PatternView(pattern: pattern)) {
-                        PatternCard(pattern: pattern)
+            if patterns.count == 0 {
+                VStack {
+                    Text("You don't have any patterns yet")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(.vertical)
+                
+            } else {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
+                    ForEach(patterns) { pattern in
+                        NavigationLink(destination: PatternView(pattern: pattern)) {
+                            PatternCard(pattern: pattern)
+                        }
                     }
                 }
+                .padding(.top)
             }
-            .padding(.top)
+            
         }
         .padding(.horizontal)
     }
