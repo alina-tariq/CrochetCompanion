@@ -31,6 +31,7 @@ struct TabBar: View {
                 }
             
             GlossaryView()
+                .clipped()
                 .tabItem {
                     Image("Glossary")
                     Text("Glossary")
