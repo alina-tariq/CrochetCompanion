@@ -102,7 +102,7 @@ struct EditYarnView: View {
                 }
                 Section(header: Text("Additional Notes")) {
                     TextEditor(text: $notes)
-                        .frame(minHeight: 50, maxHeight: 100)
+                        .frame(minHeight: 50, maxHeight: 200)
                         .onAppear {
                             notes = yarn.notes
                         }

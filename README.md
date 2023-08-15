@@ -1,7 +1,7 @@
 <h1 align="center">Crochet Companion</h1>
 
 <p align="center">
-<img src="./CrochetCompanion/Assets.xcassets/LaunchImage.imageset/launchImage.png" />
+<img src="./CrochetCompanion/Assets.xcassets/LaunchImage.imageset/launchImage@3x.png" height="200" />
 </p>
 
 ## Overview
@@ -39,8 +39,11 @@ instructions for different stitches.
 - Start new project directly from pattern
 - Connect stitches to glossary terms for easier reference
 - Add yarn from collection to a project
-- Ravelry API integration? 
-- Create accompanying watchOS app?
+- Sync across devices*
+- Ravelry API integration*
+- Create accompanying watchOS app*
+
+*still considering
 
 ## Attribution
 

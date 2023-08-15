@@ -83,14 +83,14 @@ struct EditPatternView: View {
                 
                 Section(header: Text("Pattern *")) {
                     TextEditor(text: $instructions)
-                        .frame(minHeight: 60, maxHeight: 100)
+                        .frame(minHeight: 60, maxHeight: 200)
                         .onAppear {
                             instructions = pattern.instructions
                         }
                 }
                 Section(header: Text("Additional Notes")) {
                     TextEditor(text: $notes)
-                        .frame(minHeight: 60, maxHeight: 100)
+                        .frame(minHeight: 60, maxHeight: 200)
                         .onAppear {
                             notes = pattern.notes
                         }

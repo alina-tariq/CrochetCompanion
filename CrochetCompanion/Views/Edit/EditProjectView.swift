@@ -72,11 +72,11 @@ struct EditProjectView: View {
                         .onAppear{
                             instructions = project.instructions
                         }
-                        .frame(minHeight: 50, maxHeight: 100)
+                        .frame(minHeight: 50, maxHeight: 200)
                 }
                 Section(header: Text("Additional Notes")) {
                     TextEditor(text: $notes)
-                        .frame(minHeight: 50, maxHeight: 100)
+                        .frame(minHeight: 50, maxHeight: 200)
                         .onAppear{
                             notes = project.notes
                         }
