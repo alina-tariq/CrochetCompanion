@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct NewProjectView: View {
+    var projectVM = ProjectViewModel()
+    
     @State private var name: String = ""
     @State private var imageUrl: String = ""
     @State private var yarn: String = ""
@@ -16,8 +17,6 @@ struct NewProjectView: View {
     @State private var patternUrl: String = ""
     @State private var instructions: String = ""
     @State private var notes: String = ""
-    
-    @ObservedResults(Project.self) var projects
     
     @Environment(\.dismiss) var dismissProjectSheet
     
@@ -66,17 +65,7 @@ struct NewProjectView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        let newProject = Project()
-                        newProject.name = name
-                        newProject.imageUrl = imageUrl
-                        newProject.yarn = yarn
-                        newProject.stitches = stitches
-                        newProject.patternUrl = patternUrl
-                        newProject.instructions = instructions
-                        newProject.notes = notes
-                        
-                        $projects.append(newProject)
-                        
+                        projectVM.addProject(name: name, imageUrl: imageUrl, stitches: stitches, patternUrl: patternUrl, instructions: instructions, yarn: yarn, notes: notes)
                         dismissProjectSheet()
                     } label: {
                         Label("", systemImage: "checkmark")

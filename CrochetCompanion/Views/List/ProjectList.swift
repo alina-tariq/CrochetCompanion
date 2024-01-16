@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct ProjectList: View {
-    @ObservedResults(Project.self) var projects
+    var projectVM = ProjectViewModel()
     
     var body: some View {
+        let projectCount = projectVM.returnCount()
+        let projects = projectVM.returnProjects()
+        
         VStack {
             HStack {
-                Text("\(projects.count) \(projects.count == 1 ? "project" : "projects")")
+                Text("\(projectCount) \(projectCount == 1 ? "project" : "projects")")
                 .font(.headline)
                 .fontWeight(.medium)
                 .opacity(0.6)
@@ -22,7 +24,7 @@ struct ProjectList: View {
                 Spacer()
             }
             
-            if projects.count == 0 {
+            if projectCount == 0 {
                 VStack {
                     Text("You don't have any projects yet")
                         .frame(maxWidth: .infinity, alignment: .leading)

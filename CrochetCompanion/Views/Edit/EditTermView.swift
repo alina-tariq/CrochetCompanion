@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct EditTermView: View {
-    @ObservedRealmObject var term: Term
+    var term: Term
+    var termVM = TermViewModel()
     
     @State private var name: String = ""
     @State private var instructions: String = ""
@@ -63,18 +63,7 @@ struct EditTermView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        let thawedTerm = term.thaw()
-                        if thawedTerm!.isInvalidated == false {
-                            // get the object's realm
-                            let thawedRealm = thawedTerm!.realm!
-                            
-                            try! thawedRealm.write {
-                                thawedTerm!.name = name
-                                thawedTerm!.instructions = instructions
-                                thawedTerm!.imageUrl = imageUrl
-                                thawedTerm!.videoUrl = videoUrl
-                            }
-                        }
+                        termVM.editTerm(term: term, name: name, instructions: instructions, imageUrl: imageUrl, videoUrl: videoUrl)
                         dismissTermSheet()
                     } label: {
                         Label("", systemImage: "checkmark")

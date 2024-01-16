@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct PatternView: View {
     var pattern: Pattern
+    var patternVM = PatternViewModel()
     @State private var editPattern = false
     @State private var goBack = false
     
@@ -93,15 +93,7 @@ struct PatternView: View {
             .padding(.horizontal)
             
             Button(action: {
-                let thawedPattern = pattern.thaw()
-                if thawedPattern!.isInvalidated == false { //ensure it's a valid item
-                    
-                    let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
-                    
-                    try! thawedRealm.write {
-                        thawedRealm.delete(thawedPattern!)
-                    }
-                }
+                patternVM.deletePattern(pattern: pattern)
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Delete Pattern")

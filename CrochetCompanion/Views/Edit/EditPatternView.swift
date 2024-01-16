@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct EditPatternView: View {
-    @ObservedRealmObject var pattern: Pattern
+    var pattern: Pattern
+    var patternVM = PatternViewModel()
     
     @State private var name: String = ""
     @State private var imageUrl: String = ""
@@ -108,22 +108,7 @@ struct EditPatternView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        let thawedPattern = pattern.thaw()
-                        if thawedPattern!.isInvalidated == false {
-                            // get the object's realm
-                            let thawedRealm = thawedPattern!.realm!
-                            
-                            try! thawedRealm.write {
-                                thawedPattern!.name = name
-                                thawedPattern!.imageUrl = imageUrl
-                                thawedPattern!.instructions = instructions
-                                thawedPattern!.stitches = stitches
-                                thawedPattern!.patternUrl = patternUrl
-                                thawedPattern!.notes = notes
-                                thawedPattern!.hook = hook.id
-                                thawedPattern!.yarnWeight = yarnWeight.id
-                            }
-                        }
+                        patternVM.editPattern(pattern: pattern, name: name, imageUrl: imageUrl, instructions: instructions, stitches: stitches, patternUrl: patternUrl, notes: notes, hook: hook, yarnWeight: yarnWeight)
                         dismissPatternSheet()
                     } label: {
                         Label("", systemImage: "checkmark")

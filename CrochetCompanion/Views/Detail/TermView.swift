@@ -10,6 +10,8 @@ import YouTubePlayerKit
 
 struct TermView: View {
     var term: Term
+    var termVM = TermViewModel()
+    
     @State private var editTerm = false
     @State private var goBack = false
     
@@ -72,15 +74,7 @@ struct TermView: View {
             .padding(.bottom)
             
             Button(action: {
-                let thawedPattern = term.thaw()
-                if thawedPattern!.isInvalidated == false { //ensure it's a valid item
-                    
-                    let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
-                    
-                    try! thawedRealm.write {
-                        thawedRealm.delete(thawedPattern!)
-                    }
-                }
+                termVM.deleteTerm(term: term)
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Delete Term")

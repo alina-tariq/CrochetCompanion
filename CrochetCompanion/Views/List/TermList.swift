@@ -6,16 +6,19 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct TermList: View {
-    @ObservedResults(Term.self, sortDescriptor: SortDescriptor(keyPath: "name", ascending: true)) var terms
+    var termVM = TermViewModel()
+    
     @Environment(\.defaultMinListRowHeight) var minRowHeight
     
     var body: some View {
+        let termCount = termVM.returnCount()
+        let terms = termVM.returnTerms()
+        
         VStack {
             HStack {
-                Text("\(terms.count) \(terms.count == 1 ? "term" : "terms")")
+                Text("\(termCount) \(termCount == 1 ? "term" : "terms")")
                     .font(.headline)
                     .fontWeight(.medium)
                     .opacity(0.6)
