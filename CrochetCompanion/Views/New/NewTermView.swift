@@ -6,15 +6,14 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct NewTermView: View {
+    var termVM = TermViewModel()
+    
     @State private var name: String = ""
     @State private var instructions: String = ""
     @State private var imageUrl: String = ""
     @State private var videoUrl: String = ""
-    
-    @ObservedResults(Term.self) var terms
     
     @Environment(\.dismiss) var dismissTermSheet
     
@@ -51,14 +50,7 @@ struct NewTermView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        let newTerm = Term()
-                        newTerm.name = name
-                        newTerm.instructions = instructions
-                        newTerm.imageUrl = imageUrl
-                        newTerm.videoUrl = videoUrl
-                        
-                        $terms.append(newTerm)
-                        
+                        termVM.addTerm(name: name, imageUrl: imageUrl, videoUrl: videoUrl, instructions: instructions)
                         dismissTermSheet()
                     } label: {
                         Label("", systemImage: "checkmark")

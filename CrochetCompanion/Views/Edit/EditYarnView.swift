@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct EditYarnView: View {
-    @ObservedRealmObject var yarn: Yarn
+    var yarn: Yarn
+    var yarnVM = YarnViewModel()
     
     @State private var brand: String = ""
     @State private var name: String = ""
@@ -120,23 +120,7 @@ struct EditYarnView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        let thawedYarn = yarn.thaw()
-                        if thawedYarn!.isInvalidated == false {
-                            // get the object's realm
-                            let thawedRealm = thawedYarn!.realm!
-                            
-                            try! thawedRealm.write {
-                                thawedYarn!.brand = brand
-                                thawedYarn!.name = name
-                                thawedYarn!.colour = colour
-                                thawedYarn!.colourFamily = colourFamily.rawValue
-                                thawedYarn!.yarnWeight = yarnWeight.rawValue
-                                thawedYarn!.dyeLot = dyeLot
-                                thawedYarn!.imageUrl = imageUrl
-                                thawedYarn!.qty = qty
-                                thawedYarn!.notes = notes
-                            }
-                        }
+                        yarnVM.editYarn(yarn: yarn, name: name, brand: brand, colour: colour, colourFamily: colourFamily, yarnWeight: yarnWeight, dyeLot: dyeLot, imageUrl: imageUrl, qty: qty, notes: notes)
                         dismissYarnSheet()
                     } label: {
                         Label("", systemImage: "checkmark")

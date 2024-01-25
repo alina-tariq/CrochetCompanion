@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct YarnList: View {
-    @ObservedResults(Yarn.self) var yarns
+    var yarnVM = YarnViewModel()
     
     var body: some View {
+        let yarnCount = yarnVM.returnCount()
+        let yarns = yarnVM.returnYarns()
+        
         VStack {
             HStack {
-                Text("Count: \(yarns.count)")
+                Text("Count: \(yarnCount)")
                     .font(.headline)
                     .fontWeight(.medium)
                     .opacity(0.6)
@@ -22,7 +24,7 @@ struct YarnList: View {
                 Spacer()
             }
             
-            if yarns.count == 0 {
+            if yarnCount == 0 {
                 VStack {
                     Text("You don't have any yarns yet")
                         .frame(maxWidth: .infinity, alignment: .leading)

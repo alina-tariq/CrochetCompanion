@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct NewYarnView: View {
+    var yarnVM = YarnViewModel()
+    
     @State private var brand: String = ""
     @State private var name: String = ""
     @State private var colour: String = ""
@@ -18,8 +19,6 @@ struct NewYarnView: View {
     @State private var imageUrl: String = ""
     @State private var qty: Int = 0
     @State private var notes: String = ""
-    
-    @ObservedResults(Yarn.self) var yarnCollection
     
     @Environment(\.dismiss) var dismissYarnSheet
     
@@ -94,19 +93,7 @@ struct NewYarnView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        let newYarn = Yarn()
-                        newYarn.brand = brand
-                        newYarn.name = name
-                        newYarn.colour = colour
-                        newYarn.colourFamily = colourFamily.rawValue
-                        newYarn.yarnWeight = yarnWeight.rawValue
-                        newYarn.dyeLot = dyeLot
-                        newYarn.imageUrl = imageUrl
-                        newYarn.qty = qty
-                        newYarn.notes = notes
-                        
-                        $yarnCollection.append(newYarn)
-                        
+                        yarnVM.addYarn(name: name, imageUrl: imageUrl, brand: brand, colour: colour, colourFamily: colourFamily, yarnWeight: yarnWeight, notes: notes, dyeLot: dyeLot, qty: qty)
                         dismissYarnSheet()
                     } label: {
                         Label("", systemImage: "checkmark")

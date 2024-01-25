@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct ProjectCard: View {
     var project: Project

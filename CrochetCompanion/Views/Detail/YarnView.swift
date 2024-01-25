@@ -9,6 +9,8 @@ import SwiftUI
 
 struct YarnView: View {
     var yarn: Yarn
+    var yarnVM = YarnViewModel()
+    
     @State private var editYarn = false
     @State private var goBack = false
     
@@ -90,15 +92,7 @@ struct YarnView: View {
             .padding(.horizontal)
             
             Button(action: {
-                let thawedPattern = yarn.thaw()
-                if thawedPattern!.isInvalidated == false { //ensure it's a valid item
-                    
-                    let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
-                    
-                    try! thawedRealm.write {
-                        thawedRealm.delete(thawedPattern!)
-                    }
-                }
+                yarnVM.deleteYarn(yarn: yarn)
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Delete Yarn")

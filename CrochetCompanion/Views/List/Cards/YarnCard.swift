@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct YarnCard: View {
     var yarn: Yarn

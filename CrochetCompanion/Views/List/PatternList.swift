@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct PatternList: View {
-    @ObservedResults(Pattern.self) var patterns
+    var patternVM = PatternViewModel()
     
     var body: some View {
+        let patternCount = patternVM.returnCount()
+        let patterns = patternVM.returnPatterns()
+        
         VStack {
             HStack {
-                Text("\(patterns.count) \(patterns.count == 1 ? "pattern" : "patterns")")
+                Text("\(patternCount) \(patternCount == 1 ? "pattern" : "patterns")")
                     .font(.headline)
                     .fontWeight(.medium)
                     .opacity(0.6)
@@ -22,7 +24,7 @@ struct PatternList: View {
                 Spacer()
             }
             
-            if patterns.count == 0 {
+            if patternCount == 0 {
                 VStack {
                     Text("You don't have any patterns yet")
                         .frame(maxWidth: .infinity, alignment: .leading)

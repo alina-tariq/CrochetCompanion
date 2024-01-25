@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct NewPatternView: View {
+    var patternVM = PatternViewModel()
+    
     @State private var name: String = ""
     @State private var imageUrl: String = ""
     @State private var hook: HookSizes = HookSizes.unknown
@@ -17,8 +18,6 @@ struct NewPatternView: View {
     @State private var patternUrl: String = ""
     @State private var instructions: String = ""
     @State private var notes: String = ""
-    
-    @ObservedResults(Pattern.self) var patterns
     
     @Environment(\.dismiss) var dismissPatternSheet
     
@@ -84,18 +83,8 @@ struct NewPatternView: View {
                     }.padding()
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        let newPattern = Pattern()
-                        newPattern.name = name
-                        newPattern.imageUrl = imageUrl
-                        newPattern.instructions = instructions
-                        newPattern.stitches = stitches
-                        newPattern.patternUrl = patternUrl
-                        newPattern.notes = notes
-                        newPattern.hook = hook.id
-                        newPattern.yarnWeight = yarnWeight.id
-                        
-                        $patterns.append(newPattern)
+                    Button {                        
+                        patternVM.addPattern(name: name, imageUrl: imageUrl, stitches: stitches, patternUrl: patternUrl, instructions: instructions, hook: hook, yarnWeight: yarnWeight, notes: notes)
                         
                         dismissPatternSheet()
                     } label: {

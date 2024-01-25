@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProjectView: View {
     var project: Project
+    var projectVM = ProjectViewModel()
+    
     @State private var editProject = false
     @State private var goBack = false
     
@@ -94,15 +96,7 @@ struct ProjectView: View {
             .padding(.horizontal)
             
             Button(action: {
-                let thawedPattern = project.thaw()
-                if thawedPattern!.isInvalidated == false { //ensure it's a valid item
-                    
-                    let thawedRealm = thawedPattern!.realm! //get the realm it belongs to
-                    
-                    try! thawedRealm.write {
-                        thawedRealm.delete(thawedPattern!)
-                    }
-                }
+                projectVM.deleteProject(project: project)
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Delete Project")

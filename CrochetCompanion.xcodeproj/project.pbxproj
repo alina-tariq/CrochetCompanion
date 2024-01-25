@@ -47,6 +47,10 @@
 		C7AD33962A89694F00EA424A /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = C7AD336F2A89694F00EA424A /* YouTubePlayerKit */; };
 		C7AD33982A89694F00EA424A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60EC2A8442FE00A30380 /* Preview Assets.xcassets */; };
 		C7AD33992A89694F00EA424A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C73F60E92A8442FE00A30380 /* Assets.xcassets */; };
+		C7C4B4092B5662290074E4AD /* PatternViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B4082B5662290074E4AD /* PatternViewModel.swift */; };
+		C7C4B40D2B5669C80074E4AD /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B40C2B5669C80074E4AD /* ProjectViewModel.swift */; };
+		C7C4B40F2B5669D20074E4AD /* YarnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B40E2B5669D20074E4AD /* YarnViewModel.swift */; };
+		C7C4B4112B5669DD0074E4AD /* TermViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C4B4102B5669DD0074E4AD /* TermViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		C798FCD92A89B50000B26242 /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
 		C798FCDB2A89BA0C00B26242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7AD339D2A89694F00EA424A /* CrochetCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrochetCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C4B4082B5662290074E4AD /* PatternViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternViewModel.swift; sourceTree = "<group>"; };
+		C7C4B40C2B5669C80074E4AD /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		C7C4B40E2B5669D20074E4AD /* YarnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnViewModel.swift; sourceTree = "<group>"; };
+		C7C4B4102B5669DD0074E4AD /* TermViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewModel.swift; sourceTree = "<group>"; };
 		C7FDB20A2A85981000C06EA4 /* ImageUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadView.swift; sourceTree = "<group>"; };
 		C7FDB2142A86ED1400C06EA4 /* PatternCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCard.swift; sourceTree = "<group>"; };
 		C7FDB2162A86EDD300C06EA4 /* ProjectCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCard.swift; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 				C75364912A8961CC003403B8 /* Info.plist */,
 				C798FCD92A89B50000B26242 /* default.realm */,
 				C73F60E52A8442FD00A30380 /* CrochetCompanionApp.swift */,
+				C7C4B4052B565E3C0074E4AD /* ViewModels */,
 				C798FCDB2A89BA0C00B26242 /* AppDelegate.swift */,
 				C73F60F32A8443E300A30380 /* Views */,
 				C73F60F52A84440A00A30380 /* Models */,
@@ -213,6 +222,17 @@
 				C753648F2A888D79003403B8 /* EditProjectView.swift */,
 			);
 			path = Edit;
+			sourceTree = "<group>";
+		};
+		C7C4B4052B565E3C0074E4AD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C7C4B4082B5662290074E4AD /* PatternViewModel.swift */,
+				C7C4B40C2B5669C80074E4AD /* ProjectViewModel.swift */,
+				C7C4B40E2B5669D20074E4AD /* YarnViewModel.swift */,
+				C7C4B4102B5669DD0074E4AD /* TermViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C7FDB2132A86E9AE00C06EA4 /* Cards */ = {
@@ -327,6 +347,7 @@
 				C7AD337D2A89694F00EA424A /* ProjectCard.swift in Sources */,
 				C7AD337E2A89694F00EA424A /* ContentView.swift in Sources */,
 				C7AD337F2A89694F00EA424A /* TermView.swift in Sources */,
+				C7C4B4112B5669DD0074E4AD /* TermViewModel.swift in Sources */,
 				C7AD33802A89694F00EA424A /* NewYarnView.swift in Sources */,
 				C7AD33812A89694F00EA424A /* ImageUploadView.swift in Sources */,
 				C7AD33822A89694F00EA424A /* NewPatternView.swift in Sources */,
@@ -340,7 +361,10 @@
 				C7AD338A2A89694F00EA424A /* YarnCollectionView.swift in Sources */,
 				C7AD338B2A89694F00EA424A /* TermCard.swift in Sources */,
 				C7AD338C2A89694F00EA424A /* TermList.swift in Sources */,
+				C7C4B4092B5662290074E4AD /* PatternViewModel.swift in Sources */,
+				C7C4B40D2B5669C80074E4AD /* ProjectViewModel.swift in Sources */,
 				C7AD338D2A89694F00EA424A /* TabBar.swift in Sources */,
+				C7C4B40F2B5669D20074E4AD /* YarnViewModel.swift in Sources */,
 				C7AD338E2A89694F00EA424A /* EditPatternView.swift in Sources */,
 				C7AD338F2A89694F00EA424A /* NewTermView.swift in Sources */,
 				C7AD33902A89694F00EA424A /* ProjectView.swift in Sources */,

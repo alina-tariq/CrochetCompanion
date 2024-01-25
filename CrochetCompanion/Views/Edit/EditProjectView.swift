@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct EditProjectView: View {
-    @ObservedRealmObject var project: Project
+    var project: Project
+    var projectVM = ProjectViewModel()
     
     @State private var name: String = ""
     @State private var imageUrl: String = ""
@@ -110,6 +110,7 @@ struct EditProjectView: View {
                                 thawedProject!.notes = notes
                             }
                         }
+                        projectVM.editProject(project: project, name: name, imageUrl: imageUrl, yarn: yarn, stitches: stitches, patternUrl: patternUrl, notes: notes, finished: finished, instructions: instructions)
                         dismissProjectSheet()
                     } label: {
                         Label("", systemImage: "checkmark")
